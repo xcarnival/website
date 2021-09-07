@@ -1,0 +1,151 @@
+<template>
+  <div class='aboutUs'>
+    <div class="swiper_list4">
+      <h1>Discover</h1>
+      <p>News</p>
+      <div class="swiper_banner">
+        <img class='ic_prev' src='../../assets/ic_prev.png' />
+        <img class='ic_next' src='../../assets/ic_next.png' />
+        <div class="swiper_banner_list">
+          <img src='../../assets/aboutUsImg1.png' />
+          <div>
+            <span>Jun 17, 2021</span>
+            <span>XCarnival interview: the world needs better synthetic assets</span>
+          </div>
+        </div>
+        <div class="swiper_banner_list">
+          <img src='../../assets/aboutUsImg2.png' />
+          <div>
+            <span>Jun 17, 2021</span>
+            <span>XCarnival interview: the world needs better synthetic assets</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</template>
+
+@import  "../../assets/font/Georgia.ttf";
+@import  "../../assets/font/DMSans-Medium.ttf";
+
+<script>
+
+// import { Swiper } from 'swiper';
+// import 'swiper/css';
+
+export default {
+  name: 'aboutUs',
+  props: {
+    
+  },
+  components:{
+    // Swiper
+  }
+}
+</script>
+
+<style scoped>
+  .aboutUs{
+    width:100%;
+    bottom:0;
+    left:0;
+    top:6rem;
+    position:absolute;
+    margin:0;
+    padding:0;
+    float:left;
+  }
+  
+  .swiper_list4{
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+    bottom:0;
+  }
+  .swiper_list4>h1{
+    font-size:6.8rem;
+    width:100%;
+    line-height:8rem;
+    text-align:center;
+    margin: 3rem 0 0 0 ;
+    font-weight:bold;
+    font-family:'Georgia'
+  }
+  .swiper_list4>p{
+    font-size:16px;
+    width:100%;
+    text-align:center;
+    margin:0;
+    font-weight: bold;
+    font-family:'DMSans-Medium'
+  }
+  .swiper_banner{
+    position:absolute;
+    left:0;
+    bottom:5rem;
+    height:33rem;
+    width:100%;
+  }
+  .ic_prev{
+    position:absolute;
+    left:1.6rem;
+    top:50%;
+    width: 2.8rem;
+    height:5rem;
+    margin-top:-1.4rem; 
+  }
+  .ic_next{
+    position:absolute;
+    right:1.6rem;
+    top:50%;
+    width: 2.8rem;
+    height:5rem;
+    margin-top:-1.4rem; 
+  }
+  .swiper_banner_list{
+    width:31rem;
+    display:inline-block;
+    margin-right:2rem;
+    height:100%;
+    position:relative;
+  }
+  .swiper_banner_list>img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+  }
+  .swiper_banner_list>div{
+    position:absolute;
+    width:100%;
+    height:5.6rem;
+    bottom:0;
+    background:rgba(0, 0, 0, 0.8);
+    float:left;
+    padding:1rem;
+    box-sizing:border-box;
+  }
+  .swiper_banner_list>div>span:nth-child(1){
+    font-size: 1.4rem;
+    color:white;
+    width:40%;
+    line-height:1.4rem;
+    height:100%;
+    display:inline-block;
+    box-sizing:border-box;
+    float:left;
+    font-family:'DMSans-Medium'
+  }
+  .swiper_banner_list>div>span:nth-child(2){
+    font-size: 1.2rem;
+    line-height:1.2rem;
+    width:60%;
+    color:white;
+    height:100%;
+    display:inline-block;
+    box-sizing:border-box;
+    float:left;
+    
+  }
+</style>
