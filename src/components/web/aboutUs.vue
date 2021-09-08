@@ -1,114 +1,92 @@
 <template>
   <div class='aboutUs'>
-    <!-- <div class='swiper_list'>
-      <div class='swiper_list_introduce'>
-        <h1>What's</h1>
-        <h1>XCarnival?</h1>
-        <p>XCarnival is an aggregator for synthetic decentralized finance (DeFi) assets that provides the masses on-chain exposure to a wide variety of crypto and non-crypto assets.</p>
-        <div>
-          Unique Value Proposition
-        </div>
-        <p>
-          XCarnival not only provides easy-to-use financial products for users to create synthetic assets in DeFi, but also creates more liquidity in the DeFi market by allowing users to pledge and borrow NFTs and other Altcoin assets without having to sell them
-        </p>
-        <img src='../../assets/ic_down.png' class="ic_down">
-      </div>
-      <div>
-        <img class='aboutUsImg' src='../../assets/aboutUsImg1.png' />
-      </div>
-    </div> -->
-    <!-- <div class='swiper_list swiper_list2'>
-      <div>
-        <img class='aboutUsImg2' src='../../assets/aboutUsImg2.png' />
-        <img src='../../assets/ic_down.png' class="ic_down">    
-      </div>
-      <div class='swiper_list_introduce swiper_list_introduce2'>
-        <h1>The Vision</h1>
-        <b></b>
-        <h2>Everything is Collateral</h2>
-        <p>Regardless of whether they are NFTs or altcoins with liquidity issues, valuable assets require sustainable solutions for unlocking liquidity. We have solved that.</p>
-        <h2>Evolvable Metaverse<br/>Lending solution</h2>
-        <p>Our evolution is your evolution. Metaverse Epoch is coming with unpredictable formsOur highly-flexible solution will fit the requirements of Metaverse.</p>
-      </div>
-    </div> -->
-    <!-- <div class='swiper_list3'>
-      <h1>Roadmap</h1>
-      <img src='../../assets/ic_down.png' class='ic_down ic_down2'/>
-      <div class='swiper_list3_charts'>
-        <div>
-          <div>
-            <p>Concept Creation</p>
-            <p>Team Construction</p>
-            <p>Idea Optimization</p>
+    <img src='../../assets/ic_down.png' class="ic_down" :class="activeClass?'ic_active':'ic_hide'">
+    <swiper ref="mySwiper" :options="swiperOptions" class='swiper_box' >
+      <swiperSlide class='swiperSlide' style='flex-wrap:wrap'>
+        <div class='swiper_list'>
+          <div class='swiper_list_introduce'>
+            <h1>What's</h1>
+            <h1>XCarnival?</h1>
+            <p>XCarnival is an aggregator for synthetic decentralized finance (DeFi) assets that provides the masses on-chain exposure to a wide variety of crypto and non-crypto assets.</p>
+            <div>Unique Value Proposition</div>
+            <p>XCarnival not only provides easy-to-use financial products for users to create synthetic assets in DeFi, but also creates more liquidity in the DeFi market by allowing users to pledge and borrow NFTs and other Altcoin assets without having to sell them</p>
           </div>
-          <h3>2020 Q4</h3>
-        </div>
-        <div>
           <div>
-            <p>Verify the main logistic of the project</p>
-            <p>Design the main structure of XCarnival</p>
-            <p>Develop the smart contract for mainstream asset
-              <br /> collateral
-            </p>
-            <p>Megabox function developed</p>
+            <img class='aboutUsImg' src='../../assets/aboutUsImg1.png' />
           </div>
-          <h3>2021 Q1</h3>
-        </div>
-        <div>
+        </div>  
+      </swiperSlide>
+      <swiperSlide class='swiperSlide'>
+        <div class='swiper_list'>
           <div>
-            <p>Develop collateral ratio evaluation model with price trace function</p>
-            <p>Develop the liquidation mechanism of normal crypto assets (altcoins) and abnormal crypto assets(NFTs)</p>
-            <p>Develop the time-limited auction clearing mechanism</p>
-            <p>XBroker function developed</p>
+            <img class='aboutUsImg2' src='../../assets/aboutUsImg2.png' />
           </div>
-          <h3>2021 Q2</h3>
-        </div>
-        <div>
-          <div>
-            <p>Smart Contract audit</p>
-            <p>Bounty program set up</p>
-            <p>Testnet launch on BSC chain</p>
-            <p>NFT mystery box design</p>
-            <p>Mainnet launch and Farming launch</p>
+          <div class='swiper_list_introduce swiper_list_introduce2'>
+            <h1>The Vision</h1>
+            <b></b>
+            <h2>Everything is Collateral</h2>
+            <p>Regardless of whether they are NFTs or altcoins with liquidity issues, valuable assets require sustainable solutions for unlocking liquidity. We have solved that.</p>
+            <h2>Evolvable Metaverse<br/>Lending solution</h2>
+            <p>Our evolution is your evolution. Metaverse Epoch is coming with unpredictable formsOur highly-flexible solution will fit the requirements of Metaverse.</p>
           </div>
-          <h3>2021 Q3</h3>
         </div>
-        <div>
-          <div>
-            <p>Multi-chain develop and deploy - ETH L2 solution</p>
-            <p>DAO build up</p>
-            <p>Cex listing</p>
-            <p>Loyalty NFT system build up</p>
-            <p>Xbroker V2 development</p>
+      </swiperSlide>
+      <swiperSlide class='swiperSlide'>
+        <div class='swiper_list3'>
+          <h1>Roadmap</h1>
+          <div class='swiper_list3_charts'>
+            <div>
+              <div>
+                <p>Concept Creation</p>
+                <p>Team Construction</p>
+                <p>Idea Optimization</p>
+              </div>
+              <h3>2020 Q4</h3>
+            </div>
+            <div>
+              <div>
+                <p>Verify the main logistic of the project</p>
+                <p>Design the main structure of XCarnival</p>
+                <p>Develop the smart contract for mainstream asset
+                  <br /> collateral
+                </p>
+                <p>Megabox function developed</p>
+              </div>
+              <h3>2021 Q1</h3>
+            </div>
+            <div>
+              <div>
+                <p>Develop collateral ratio evaluation model with price trace function</p>
+                <p>Develop the liquidation mechanism of normal crypto assets (altcoins) and abnormal crypto assets(NFTs)</p>
+                <p>Develop the time-limited auction clearing mechanism</p>
+                <p>XBroker function developed</p>
+              </div>
+              <h3>2021 Q2</h3>
+            </div>
+            <div>
+              <div>
+                <p>Smart Contract audit</p>
+                <p>Bounty program set up</p>
+                <p>Testnet launch on BSC chain</p>
+                <p>NFT mystery box design</p>
+                <p>Mainnet launch and Farming launch</p>
+              </div>
+              <h3>2021 Q3</h3>
+            </div>
+            <div>
+              <div>
+                <p>Multi-chain develop and deploy - ETH L2 solution</p>
+                <p>DAO build up</p>
+                <p>Cex listing</p>
+                <p>Loyalty NFT system build up</p>
+                <p>Xbroker V2 development</p>
+              </div>
+              <h3>2021 Q4</h3>
+            </div>
           </div>
-          <h3>2021 Q4</h3>
         </div>
-      </div>
-    </div> -->
-    <div class="swiper_list4">
-      <h1>Advisors</h1>
-      <p>Our most professional team</p>
-      <div class='advisors_list'>
-        <div>
-          <img src='../../assets/advisors1.png' />
-        </div>
-        <div>
-          <img src='../../assets/advisors2.png' />
-        </div>
-        <div>
-          <img src='../../assets/advisors3.png' />
-        </div>
-        <div>
-          <img src='../../assets/advisors4.png' />
-        </div>
-        <div>
-          <img src='../../assets/advisors5.png' />
-        </div>
-        <div>
-          <img src='../../assets/advisors6.png' />
-        </div>
-      </div>
-    </div>
+      </swiperSlide>
+    </swiper>
   </div>
 </template>
 
@@ -117,17 +95,49 @@
 @import  "../../assets/font/DMSans-Medium.ttf";
 
 <script>
-
-// import { Swiper } from 'swiper';
-// import 'swiper/css';
-
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+let that;
 export default {
   name: 'aboutUs',
-  props: {
-    
-  },
+  props: {},
   components:{
-    // Swiper
+    swiper, swiperSlide
+  },
+  data(){
+    return{
+      activeClass:true,
+      swiperOptions: {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        effect:"slide",
+        loop:true,
+        speed: 1500,
+        autoplay: {
+          disableOnInteraction: false,
+          delay: 3000,
+          stopOnLastSlide: false,
+        },
+        on:{
+          slideChange: function(){
+            console.log('开始滑动')
+            that.activeClass = false;
+            setTimeout(() => {
+              that.activeClass = true;
+            }, 1500);
+          },  
+        }
+      }
+    }
+  },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.swiper
+    }
+  },
+  mounted() {
+    that=this;
+    console.log(this.swiper)
+    
   }
 }
 </script>
@@ -135,24 +145,31 @@ export default {
 <style scoped>
   .aboutUs{
     width:100%;
-    bottom:0;
-    left:0;
-    top:6rem;
-    position:absolute;
-    margin:0;
-    padding:0;
-    float:left;
+    height:100%;
   }
   .swiper_list{
-    width:100%;
     position:absolute;
+    overflow:hidden;
+    height:100%;
+    width:100%;
+    left:0;
+    top:0;
+    background:white;
+  }
+  .swiper_list3{
+    width:100%;
+    position:relative;
     bottom:0;
     top:0;
+    height:100%;
+    background:white;
   }
   .aboutUsImg{
-    width:80%;
-    margin-left:10%;
+    width:100;
+    height:100%;
+    margin-left:20%;
     margin-top:5rem;
+    object-fit:cover;
   }
   .aboutUsImg2{
     height:90%;
@@ -223,13 +240,9 @@ export default {
     height:80px;
     left:3rem;
     bottom:3rem;
+    z-index:3;
   }
-  .swiper_list3{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-  }
+  
   .swiper_list3>h1{
     font-size:6.8rem;
     margin: 3rem 0 0 3.5rem;
@@ -306,40 +319,37 @@ export default {
     font-size:1.4rem;
     font-weight:bold;
   }
-  .swiper_list4{
+  .swiper_box{
     position:absolute;
     width:100%;
     left:0;
     top:0;
     bottom:0;
+    flex-wrap:wrap;
   }
-  .swiper_list4>h1{
-    font-size:6.8rem;
+  .swiperSlide{
     width:100%;
-    text-align:center;
-    margin: 5rem 0 0 0 ;
+    position:relative;
+    left:0;
+    top:0;
+
   }
-  .swiper_list4>p{
-    font-size:16px;
-    width:100%;
-    text-align:center;
-    margin:0
+  .swiper-wrapper{
+    flex-wrap:wrap !important;
   }
-  .advisors_list{
-    width: calc(100% - 14rem);
-    margin-left: 5rem;
-    background:yellow;
-    height:100%;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-between;
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap:wrap;
   }
-  .advisors_list>div img{
-    height:100%;
+  .ic_active{
+    opacity:1;
+    transition: opacity 0.5s;
   }
-  .advisors_list>div{
-    width: calc(calc(100% - 20px)/3);
-    height: 49%;
-    
+  .ic_hide{
+    opacity:0;
+    transition: opacity 0.1s;
   }
 </style>

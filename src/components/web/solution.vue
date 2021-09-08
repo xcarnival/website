@@ -1,61 +1,71 @@
 <template>
-  <div class='aboutUs'>
-    <!-- <div class='swiper_list'>
-      <div class='swiper_list_line'>
-        <span>
-          Pain Points of current lending markets
-        </span>
-        <img src='../../assets/ic_down.png' class="ic_down">
-      </div>
-      <div class='swiper_list_introduce'>
-        <h2>NFT as collateral? Not Accepted</h2>
-        <p>NFTs can not be used as collateral.
-          <br />Everybody knows NFT is amazing, NFT is the key foundation for Metaverse but currently almost no lending platforms treat NFTs as stable and valuable assets.
-        </p>
-        <h2>AltCoins? Too Risky</h2>
-        <p>Huge value are locked in Altcoins but refused as the collateral.
-New projects are born everyday, their tokens are trading. However people can hardly find a place to unlock the liquidity of these assets due to the risk aversion of current lending platforms.</p>
-        <h2>Big Change? No</h2>
-        <p>Lending industry develops fast but incumbent players are slow to catch up. Most of current lending platforms are used to stable business models with few motivations to take big innovation. Taking traditional funds into the crypto is a safe direction but people also need solutions flexible enough to fit the changing trends and requirements needed.</p>
-      </div>
-    </div> -->
-    <!-- <div class='swiper_list swiper_list2'>
-      <div>
-        <img class='aboutUsImg2' src='../../assets/solutionImg.png' />
-        <img src='../../assets/ic_down.png' class="ic_down">    
-      </div>
-      <div class='swiper_list_introduce swiper_list_introduce2'>
-        <h1>Solution</h1>
-        <h1>Matrix</h1>
-        <b></b>
-        <h2>XBroker</h2>
-        <p>XCarnival's original time-limited auction clearing mechanism. The pledge model is optimized for special types of assets with extremely poor liquidity, such as NFTs.</p>
-        <h2>Megabox</h2>
-        <p>Allows users to unlock the liquidation of their long-tail assets which have relatively limited liquidity (such as Altcoins and LPs).</p>
-      </div>
-    </div> -->
-    <div class='swiper_list3'>
-      <h1>XCarnival’s</h1>
-      <h1>4 Competitive Advances</h1>
-      <div class='swiper_list_solution'>
-        <div >
-          <span>1</span>
-          <div>XCarnival’s products could be used for lending and pledging of all kinds of NFTs, including celebrity NFTs,Virtual identity, financial NFTs, and Loyalty NFTs. Its third-party platform operating model can contain the risks within each transaction, so as to avoid systemic risks and bad debts.</div>
+  <div class='solution'>
+    <img src='../../assets/ic_down.png' class="ic_down" :class="activeClass?'ic_active':'ic_hide'">
+    <swiper ref="mySwiper" :options="swiperOptions" class='swiper_box' >
+      <swiperSlide class='swiperSlide'>
+        <div class='swiper_list'>
+          <div class='swiper_list_line'>
+            <span>
+              Pain Points of current lending markets
+            </span>
+          </div>
+          <div class='swiper_list_introduce'>
+            <h2>NFT as collateral? Not Accepted</h2>
+            <p>NFTs can not be used as collateral.
+              <br />Everybody knows NFT is amazing, NFT is the key foundation for Metaverse but currently almost no lending platforms treat NFTs as stable and valuable assets.
+            </p>
+            <h2>AltCoins? Too Risky</h2>
+            <p>Huge value are locked in Altcoins but refused as the collateral.
+    New projects are born everyday, their tokens are trading. However people can hardly find a place to unlock the liquidity of these assets due to the risk aversion of current lending platforms.</p>
+            <h2>Big Change? No</h2>
+            <p>Lending industry develops fast but incumbent players are slow to catch up. Most of current lending platforms are used to stable business models with few motivations to take big innovation. Taking traditional funds into the crypto is a safe direction but people also need solutions flexible enough to fit the changing trends and requirements needed.</p>
+          </div>
+        </div>  
+      </swiperSlide>
+      <swiperSlide class='swiperSlide'>
+        <div class='swiper_list swiper_list2'>
+          <div>
+            <img class='aboutUsImg2' src='../../assets/solutionImg.png' />    
+          </div>
+          <div class='swiper_list_introduce swiper_list_introduce2'>
+            <h1>Solution</h1>
+            <h1>Matrix</h1>
+            <b></b>
+            <h2>XBroker</h2>
+            <p>XCarnival's original time-limited auction clearing mechanism. The pledge model is optimized for special types of assets with extremely poor liquidity, such as NFTs.</p>
+            <h2>Megabox</h2>
+            <p>Allows users to unlock the liquidation of their long-tail assets which have relatively limited liquidity (such as Altcoins and LPs).</p>
+          </div>
+        </div>  
+      </swiperSlide>
+      <swiperSlide class='swiperSlide'>
+        <div class='swiper_list3'>
+          <h1>XCarnival’s</h1>
+          <h1>4 Competitive Advances</h1>
+          <div class='swiper_list_solution'>
+            <div >
+              <span>1</span>
+              <div>XCarnival’s products could be used for lending and pledging of all kinds of NFTs, including celebrity NFTs,Virtual identity, financial NFTs, and Loyalty NFTs. Its third-party platform operating model can contain the risks within each transaction, so as to avoid systemic risks and bad debts.</div>
+            </div>
+            <div>
+              <span>2</span>
+              <div>XCarnival believes “Everything is collateralized”, which is in line with the development of Metaverse. XCarnival is already working with Metaverse projects to provide liquidity, such as the exclusive lending and pledging services for USM’s NFTs in the metaverse.</div>
+            </div>
+            <div>
+              <span>3</span>
+              <div>Through its mining mechanism, the XCarnival platform allows users to form a habit with NFT pledging and lending, which is one of the first in the industry, with first-to-market advantages.</div>
+            </div>
+            <div>
+              <span>4</span>
+              <div>With rapid development of the NFT market, lending & Pledging is the infrastructure of the industry, with huge potentials and demand.</div>
+            </div>
+          </div>
         </div>
-        <div>
-          <span>2</span>
-          <div>XCarnival believes “Everything is collateralized”, which is in line with the development of Metaverse. XCarnival is already working with Metaverse projects to provide liquidity, such as the exclusive lending and pledging services for USM’s NFTs in the metaverse.</div>
-        </div>
-        <div>
-          <span>3</span>
-          <div>Through its mining mechanism, the XCarnival platform allows users to form a habit with NFT pledging and lending, which is one of the first in the industry, with first-to-market advantages.</div>
-        </div>
-        <div>
-          <span>4</span>
-          <div>With rapid development of the NFT market, lending & Pledging is the infrastructure of the industry, with huge potentials and demand.</div>
-        </div>
-      </div>
-    </div>
+      </swiperSlide>
+    </swiper>
+    
+    
+    
   </div>
 </template>
 
@@ -65,27 +75,59 @@ New projects are born everyday, their tokens are trading. However people can har
 
 
 <script>
-
-// import { Swiper } from 'swiper';
-// import 'swiper/css';
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+let that;
 
 export default {
-  name: 'aboutUs',
-  props: {
-    
-  },
+  name: 'solution',
+  props: {},
   components:{
-    // Swiper
+    swiper, swiperSlide
+  },
+  data(){
+    return{
+      activeClass:true,
+      swiperOptions: {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        loop:true,
+        speed: 1000,
+        autoplay: {
+          disableOnInteraction: false,
+          delay: 2000,
+          stopOnLastSlide: false,
+        },
+        on:{
+          slideChange: function(){
+            console.log('开始滑动')
+            that.activeClass = false;
+            setTimeout(() => {
+              that.activeClass = true;
+            }, 1500);
+          },  
+        }
+      }
+    }
+  },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.swiper
+    }
+  },
+  mounted() {
+    that = this;
+    console.log(this.swiper)
+    
   }
 }
 </script>
 
 <style scoped>
-  .aboutUs{
+  .solution{
     width:100%;
     bottom:0;
     left:0;
-    top:6rem;
+    top:0;
     position:absolute;
     margin:0;
     padding:0;
@@ -96,6 +138,7 @@ export default {
     position:absolute;
     bottom:0;
     top:0;
+    background:white;
   }
   .aboutUsImg{
     height:100%;
@@ -192,6 +235,7 @@ export default {
     height:80px;
     left:3rem;
     bottom:3rem;
+    z-index:3;
   }
   .advisors_list{
     width: calc(100% - 14rem);
@@ -213,6 +257,7 @@ export default {
     top: 0;
     bottom: 0;
     width: 100%;
+    background:white;
   }
   .swiper_list3>h1{
     font-size:6.4rem;
@@ -260,5 +305,27 @@ export default {
     display:inline-block;
     width:calc(100% - 8rem);
     font-family:'DMSans-Medium'
+  }
+  .swiperSlide{
+    width:100%;
+    position:relative;
+    left:0;
+    top:0;
+  }
+  .swiper_box{
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+    bottom:0;
+    flex-wrap:wrap;
+  }
+  .ic_active{
+    opacity:1;
+    transition: opacity 0.5s;
+  }
+  .ic_hide{
+    opacity:0;
+    transition: opacity 0.1s;
   }
 </style>

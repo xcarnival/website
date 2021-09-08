@@ -1,0 +1,7 @@
+# Folders to ignore  
+.hg  
+.svn  
+.CVS  
+.idea  
+node_modules/
+dist/

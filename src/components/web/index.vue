@@ -42,7 +42,7 @@ export default {
     background:black;
     position:absolute;
     left:0;
-    top:6rem;
+    top:0;
     bottom:0;
     z-index:0;
     overflow:hidden;

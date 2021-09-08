@@ -6,18 +6,32 @@
       <div class="swiper_banner">
         <img class='ic_prev' src='../../assets/ic_prev.png' />
         <img class='ic_next' src='../../assets/ic_next.png' />
-        <div class="swiper_banner_list">
-          <img src='../../assets/aboutUsImg1.png' />
+        <div class="swiper_banner_list" @click='goNews(1)'>
+          <img src='../../assets/discover/discover1.png' />
           <div>
-            <span>Jun 17, 2021</span>
-            <span>XCarnival interview: the world needs better synthetic assets</span>
+            <span>Jun 28, 2021</span>
+            <span>XCarnival lists on CMC, celebrating with airdrops</span>
           </div>
         </div>
-        <div class="swiper_banner_list">
-          <img src='../../assets/aboutUsImg2.png' />
+        <div class="swiper_banner_list" @click='goNews(2)'>
+          <img src='../../assets/discover/discover2.png' />
           <div>
             <span>Jun 17, 2021</span>
-            <span>XCarnival interview: the world needs better synthetic assets</span>
+            <span>XCarnival interview: the world needs better synthetic assets </span>
+          </div>
+        </div>
+        <div class="swiper_banner_list" @click='goNews(3)'>
+          <img src='../../assets/discover/discover1.png' />
+          <div>
+            <span>Jun 10, 2021</span>
+            <span>XCarnival Secures $2 Million Seed Investment</span>
+          </div>
+        </div>
+        <div class="swiper_banner_list" @click='goNews(4)'>
+          <img src='../../assets/discover/discover2.png' />
+          <div>
+            <span>Jun 09, 2021</span>
+            <span>XCarnival wins BSC Hackthon</span>
           </div>
         </div>
         
@@ -39,6 +53,27 @@ export default {
   props: {
     
   },
+  methods: {
+    goNews(i){
+      switch (i) {
+        case 1:
+          window.open ('https://www.cryptodaily.co.uk/2021/06/xcarnival-celebrates-listing')
+          break;
+        case 2:
+          window.open ("https://hackernoon.com/the-world-needs-better-synthetic-assets-unhashed-9-n93732sr")
+          break;
+        case 3:
+          window.open ("https://news.bitcoin.com/xcarnival-secures-2-million-seed-investment/")
+          break;
+        case 4:
+          window.open ("https://consent.yahoo.com/v2/collectConsent?sessionId=4_cc-session_3c40b2e0-616c-4256-b9fc-3f65595df31b")
+          break;
+        default:
+          break;
+      }
+      
+    }
+  },
   components:{
     // Swiper
   }
@@ -50,7 +85,7 @@ export default {
     width:100%;
     bottom:0;
     left:0;
-    top:6rem;
+    top:0;
     position:absolute;
     margin:0;
     padding:0;
@@ -85,8 +120,9 @@ export default {
     position:absolute;
     left:0;
     bottom:5rem;
-    height:33rem;
+    height:30rem;
     width:100%;
+    display:flex;
   }
   .ic_prev{
     position:absolute;
@@ -105,9 +141,9 @@ export default {
     margin-top:-1.4rem; 
   }
   .swiper_banner_list{
-    width:31rem;
+    width:26rem;
     display:inline-block;
-    margin-right:2rem;
+    margin-left:2rem;
     height:100%;
     position:relative;
   }
