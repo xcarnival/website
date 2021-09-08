@@ -288,19 +288,19 @@ export default {
   }
   .swiper_list3_charts>div:nth-child(1) div{
     background: #FE4905;
-    height:20%;
+    height:30%;
   }
   .swiper_list3_charts>div:nth-child(2) div{
     background: #F96209;
-    height:40%;
+    height:55%;
   }
   .swiper_list3_charts>div:nth-child(3) div{
     background: #F4740B;
-    height:60%;
+    height:70%;
   }
   .swiper_list3_charts>div:nth-child(4) div{
     background: #F68906;
-    height:80%;
+    height:85%;
   }
   .swiper_list3_charts>div:nth-child(5) div{
     background: #FFA604;
