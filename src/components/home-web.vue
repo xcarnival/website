@@ -5,9 +5,10 @@
       <ul class='home_header_tab'>
         <li @click='tabFun(1)' :class="[tabIndex == 1 ? 'tabHigh' : '']">About Us</li>
         <li @click='tabFun(2)' :class="[tabIndex == 2 ? 'tabHigh' : '']">Solution</li>
-        <li @click='tabFun(3)' :class="[tabIndex == 3 ? 'tabHigh' : '']">Investors & Partners</li>
-        <li @click='tabFun(4)' :class="[tabIndex == 4 ? 'tabHigh' : '']">Discover</li>
-        <li @click='tabFun(5)' :class="[tabIndex == 5 ? 'tabHigh' : '']">Team</li>
+        <li @click='tabFun(3)' :class="[tabIndex == 3 ? 'tabHigh' : '']">Team</li>
+        <li @click='tabFun(4)' :class="[tabIndex == 4 ? 'tabHigh' : '']">Investors & Partners</li>
+        <li @click='tabFun(5)' :class="[tabIndex == 5 ? 'tabHigh' : '']">Discover</li>
+        
       </ul>
     </div>
     
@@ -15,14 +16,14 @@
       <Index v-if='tabIndex == 0' />
       <AboutUs v-else-if='tabIndex == 1' />
       <Solution v-else-if='tabIndex == 2' />
-      <Investors v-else-if='tabIndex == 3' />
-      <Discover v-else-if='tabIndex == 4' />
-      <Team v-else-if='tabIndex == 5' />
+      <Team v-else-if='tabIndex == 3' />
+      <Investors v-else-if='tabIndex == 4' />
+      <Discover v-else-if='tabIndex == 5' />
     </div>
   </div>
 </template>
 
-@import  "../../assets/font/DMSans-Medium.ttf";
+@import  "../../assets/DMSans-Medium.ttf";
 
 <script>
 import Index from './web/index.vue'
@@ -37,7 +38,7 @@ export default {
   name: 'index',
   data(){
     return{
-      tabIndex:1
+      tabIndex:0
     }
   },
   methods: {

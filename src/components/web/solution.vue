@@ -1,7 +1,7 @@
 <template>
   <div class='solution'>
-    <img src='../../assets/ic_down.png' class="ic_down" :class="activeClass?'ic_active':'ic_hide'">
-    <swiper ref="mySwiper" :options="swiperOptions" class='swiper_box' >
+    <img src='../../assets/ic_down.png' class="ic_down" :class="activeClass?'ic_active':'ic_hide'" @click='nextSwiper'>
+    <swiper ref="mySwiper" :options="swiperOptions" class='swiper_box swiper-no-swiping' >
       <swiperSlide class='swiperSlide'>
         <div class='swiper_list'>
           <div class='swiper_list_line'>
@@ -69,9 +69,9 @@
   </div>
 </template>
 
-@import  "../../assets/font/Georgia.ttf";
-@import  "../../assets/font/DMSans-Medium.ttf";
-@import  "../../assets/font/DMSans-Regular.ttf";
+@import  "../../assets/Georgia.ttf";
+@import  "../../assets/DMSans-Medium.ttf";
+@import  "../../assets/DMSans-Regular.ttf";
 
 
 <script>
@@ -92,11 +92,11 @@ export default {
         direction: 'vertical',
         loop:true,
         speed: 1000,
-        autoplay: {
-          disableOnInteraction: false,
-          delay: 2000,
-          stopOnLastSlide: false,
-        },
+        // autoplay: {
+        //   disableOnInteraction: false,
+        //   delay: 2000,
+        //   stopOnLastSlide: false,
+        // },
         on:{
           slideChange: function(){
             console.log('开始滑动')
@@ -107,6 +107,11 @@ export default {
           },  
         }
       }
+    }
+  },
+  methods: {
+    nextSwiper(){
+      this.swiper.slideNext()
     }
   },
   computed: {

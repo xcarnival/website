@@ -2,7 +2,7 @@
   <div class='advisors'>
     <div class='advisors_list'>
       <div>
-        <div @mouseover='teamClick(1)' @mouseout='closeIntroduce()'>
+        <div @click='teamClick(1)'>
           <img src='../../assets/team/team_member_leon.png' />
           <b>Leon LIU</b>
           <span>CEO</span>
@@ -23,7 +23,7 @@
             <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
           </div>
         </div>
-        <div @mouseover='teamClick(2)' @mouseout='closeIntroduce()'>
+        <div @click='teamClick(2)'>
           <img src='../../assets/team/team_member_vivi.png' />
           <b>Vivi LIN</b>
           <span>CMO</span>
@@ -41,7 +41,7 @@
           </div>
         </div>
 
-        <div @mouseover='teamClick(3)' @mouseout='closeIntroduce()'>
+        <div @click='teamClick(3)'>
           <img src='../../assets/team/team_member_scott.png' />
           <b>Scott HAN</b>
           <span>Financial Director</span>
@@ -61,7 +61,7 @@
       </div>
 
       <div>
-        <div @mouseover='teamClick(4)' @mouseout='closeIntroduce()'>
+        <div @click='teamClick(4)'>
           <img src='../../assets/team/team_member_alan.png' />
           <b>Alan MA</b>
           <span>CTO</span>
@@ -80,7 +80,7 @@
         </div>
 
 
-        <div @mouseover='teamClick(5)' @mouseout='closeIntroduce()'>
+        <div @click='teamClick(5)'>
           <img src='../../assets/team/team_advisor_eric.png' />
           <b>Eric ZHENG</b>
           <span>Professor</span>
@@ -99,7 +99,7 @@
           </div>
           
         </div>
-        <div @mouseover='teamClick(6)' @mouseout='closeIntroduce()'>
+        <div @click='teamClick(6)'>
           <img src='../../assets/team/team_advisor_gieno.png' />
           <b>Gieno MIAO</b>
           <span>Chief Scientist</span>

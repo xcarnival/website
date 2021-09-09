@@ -8,7 +8,7 @@
           <li>Liquidation Aggregator </li>
           <li>for Everyone</li>
         </ul>
-        <div>
+        <div @click='openPDF'>
           Learn More >
         </div>
       </div>
@@ -23,16 +23,18 @@
   </div>
 </template>
 
-@import  "../../assets/font/Georgia.ttf";
-@import  "../../assets/font/DMSans-Medium.ttf";
+@import  "../../assets/Georgia.ttf";
+@import  "../../assets/DMSans-Medium.ttf";
 
 <script>
 
 export default {
   name: 'index',
-  props: {
-    
-  }
+  methods: {
+    openPDF(){
+      window.open('https://xcarnival.fi/assets/doc/lightpaper.pdf')
+    }
+  },
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class='aboutUs'>
-    <img src='../../assets/ic_down.png' class="ic_down" :class="activeClass?'ic_active':'ic_hide'">
-    <swiper ref="mySwiper" :options="swiperOptions" class='swiper_box' >
+    <img src='../../assets/ic_down.png' class="ic_down" :class="activeClass?'ic_active':'ic_hide'" @click='nextSwiper'>
+    <swiper ref="mySwiper" :options="swiperOptions" class='swiper_box swiper-no-swiping' >
       <swiperSlide class='swiperSlide' style='flex-wrap:wrap'>
         <div class='swiper_list'>
           <div class='swiper_list_introduce'>
@@ -90,9 +90,9 @@
   </div>
 </template>
 
-@import  "../../assets/font/Georgia.ttf";
-@import  "../../assets/font/DMSans-Regular.ttf";
-@import  "../../assets/font/DMSans-Medium.ttf";
+@import  "../../assets/Georgia.ttf";
+@import  "../../assets/DMSans-Regular.ttf";
+@import  "../../assets/DMSans-Medium.ttf";
 
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
@@ -112,14 +112,13 @@ export default {
         effect:"slide",
         loop:true,
         speed: 1500,
-        autoplay: {
-          disableOnInteraction: false,
-          delay: 3000,
-          stopOnLastSlide: false,
-        },
+        // autoplay: {
+        //   disableOnInteraction: false,
+        //   delay: 3000,
+        //   stopOnLastSlide: false,
+        // },
         on:{
           slideChange: function(){
-            console.log('开始滑动')
             that.activeClass = false;
             setTimeout(() => {
               that.activeClass = true;
@@ -127,6 +126,11 @@ export default {
           },  
         }
       }
+    }
+  },
+  methods: {
+    nextSwiper(){
+      this.swiper.slideNext()
     }
   },
   computed: {

@@ -4,27 +4,27 @@
       <h1>Investors & Partners</h1>
       <p>$2M Seed Funding Round</p>
       <div class='investorsView_box'>
-        <div class='investorsView_box_4'><img src='../../assets/investors/1.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/2.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/3.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/4.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/5.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/6.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/7.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/8.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/9.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/10.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/11.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/investors/12.png' /></div>
-        <div class='investorsView_box_2'><img src='../../assets/investors/13.png' /></div>
-        <div class='investorsView_box_2'><img src='../../assets/investors/14.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/1.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/2.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/3.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/4.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/5.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/6.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/7.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/8.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/9.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/10.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/11.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/12.png' /></div>
+        <div class='investorsView_box_2'><img src='../../assets/13.png' /></div>
+        <div class='investorsView_box_2'><img src='../../assets/14.png' /></div>
       </div>
     </div>
   </div>
 </template>
 
-@import  "../../assets/font/Georgia.ttf";
-@import  "../../assets/font/DMSans-Medium.ttf";
+@import  "../../assets/Georgia.ttf";
+@import  "../../assets/DMSans-Medium.ttf";
 
 <script>
 
