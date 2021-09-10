@@ -40,7 +40,7 @@ export default {
   name: 'index',
   data(){
     return{
-      tabIndex:1
+      tabIndex:0
     }
   },
   methods: {
