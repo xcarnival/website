@@ -7,7 +7,7 @@
           <div class='swiper_list_introduce'>
             <h1>What's</h1>
             <h1>XCarnival?</h1>
-            <p>XCarnival is a lending aggregator for Metaverse assets which offers innovative liquidation solutions for varieties of NFT assets and long- tail crypto assets.</p>
+            <p>XCarnival is an aggregator for synthetic decentralized finance (DeFi) assets that provides the masses on-chain exposure to a wide variety of crypto and non-crypto assets.</p>
             <div>Unique Value Proposition</div>
             <p>XCarnival not only provides easy-to-use financial products for users to create synthetic assets in DeFi, but also creates more liquidity in the DeFi market by allowing users to pledge and borrow NFTs and other Altcoin assets without having to sell them</p>
           </div>
@@ -248,10 +248,10 @@ export default {
       text-indent: 50px;
       display:block;
       width: 200px;
-      
+      margin-left:50px;
     }
     .swiper_list_introduce>h2{
-      margin:40px 0 0 0;
+      margin:40px 0 0 50px;
       font-size:30px;
       font-weight:bold;
       line-height:35px;
@@ -463,10 +463,10 @@ export default {
       text-indent: 70px;
       display:block;
       width: 280px;
-      
+      margin-left:70px;
     }
     .swiper_list_introduce>h2{
-      margin:56px 0 0 0;
+      margin:56px 0 0 70px;
       font-size:42px;
       font-weight:bold;
       line-height:49px;
@@ -679,10 +679,10 @@ export default {
       text-indent: 80px;
       display:block;
       width: 320px;
-      
+      margin-left:80px;
     }
     .swiper_list_introduce>h2{
-      margin:64px 0 0 0;
+      margin:64px 0 0 80px;
       font-size:48px;
       font-weight:bold;
       line-height:56px;

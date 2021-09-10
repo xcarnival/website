@@ -34,11 +34,8 @@
               <span>CMO</span>
             </div>
             <div>
-              <p>Global media personality, crypto influencer and  marketing advisor</p>
-              <p>Former Presenter & Producer at Reuters  Financial TV, Caixin Media & CCTV</p>
-              <p>Former Global partner for Mars Finance</p>
-              <p>Media entrepreneur in Silicon Valley</p>
-              <p>Host of Crypto Talk at Clubhouse</p>
+              <p>Global media personality, crypto influencer and marketing expert. </p>
+              <p>Well-known Innovation advisor between Silicon Valley and China.</p>
             </div>
             <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
           </div>
@@ -55,10 +52,8 @@
               <span>Financial Director</span>
             </div>
             <div>
-              <p>Business analyst in Macquarie Investment Bank and Federal Bank. </p>
-              <p>Market analyst in the Derivatives  Department of the Federal Bank</p>
+             <p>Business analyst in Macquarie Investment Bank and Federal Bank. </p>
               <p>Senior structure builder of global OTC derivatives transaction models and risk control system.</p>
-              <p>Founder of ZH Capital, one of the largest  BTC market makers in Australia</p>
             </div>
             <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
           </div>
@@ -77,8 +72,7 @@
               <span>CTO</span>
             </div>
             <div>
-            <p>Former CTO of Kcash </p>
-            <p>10 years of technology research and development experience in blockchain industry.</p>
+            <p>Former CTO of Kcash, with 10 years of technology research and development experience in blockchain industry.</p>
             </div>
             <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
           </div>
@@ -97,9 +91,9 @@
               <span>Professor</span>
             </div>
             <div>
-              <p>Professor of Information Systems and Operations  Management at the University of Texas in Dallas</p>
-              <p>Received his PhD from the Wharton School at the  University of Pennsylvania </p>
-              <p>Devoted to Information Technology, Innovation  Research, and leading studies into data mining  and social media analytics</p>
+              <p>Professor of information system. </p>
+              <p>PhD,University of Pennsylvania. </p>
+              <p>Devoted to information technology innovation research in data mining and social media analytics. </p>
             </div>
             <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
           </div>
@@ -119,7 +113,6 @@
               <p>Founder of Quantiex and chief crypto advisor for Asia Digital Bank.  </p>
               <p>Formerly, CTO of JMU and CTO of Heima. </p>
               <p>Senior Director of Amazon, Alibaba and Microsoft, Thomson Reuters.</p>
-              <p>Served Thomson Reuters as Principal Data Model  Architect and robot advisor system designer in  Wall Street</p>
             </div>
             <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
           </div>

@@ -239,7 +239,13 @@ export default {
       width: 160px;
       margin-left:16px;
     }
-    
+    .swiper_list_introduce>h2{
+      margin:32px 0 0 16px;
+      font-size:24px;
+      font-weight:bold;
+      line-height:28px;
+      text-align:left;
+    }
     .swiper_list_introduce2>h2{
       margin-left:0;
     }
@@ -440,7 +446,13 @@ export default {
       width: 200px;
       margin-left:20px;
     }
-    
+    .swiper_list_introduce>h2{
+      margin:40px 0 0 20px;
+      font-size:30px;
+      font-weight:bold;
+      line-height:35px;
+      text-align:left;
+    }
     .swiper_list_introduce2>h2{
       margin-left:0;
     }
@@ -641,7 +653,13 @@ export default {
       width: 280px;
       margin-left:28px;
     }
-    
+    .swiper_list_introduce>h2{
+      margin:56px 0 0 28px;
+      font-size:42px;
+      font-weight:bold;
+      line-height:49px;
+      text-align:left;
+    }
     .swiper_list_introduce2>h2{
       margin-left:0;
     }
@@ -842,7 +860,13 @@ export default {
       width: 319px;
       margin-left:32px;
     }
-    
+    .swiper_list_introduce>h2{
+      margin:64px 0 0 32px;
+      font-size:48px;
+      font-weight:bold;
+      line-height:56px;
+      text-align:left;
+    }
     .swiper_list_introduce2>h2{
       margin-left:0;
     }

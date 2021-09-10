@@ -140,7 +140,6 @@ export default {
       margin-top:-10px; 
     }
     .swiper_banner_list{
-      cursor: pointer;
       width:182px;
       display:inline-block;
       margin-left:14px;
@@ -244,7 +243,6 @@ export default {
       margin-top:-14px; 
     }
     .swiper_banner_list{
-      cursor: pointer;
       width:260px;
       display:inline-block;
       margin-left:20px;
@@ -348,7 +346,6 @@ export default {
       margin-top:-20px; 
     }
     .swiper_banner_list{
-      cursor: pointer;
       width:364px;
       display:inline-block;
       margin-left:28px;
@@ -452,7 +449,6 @@ export default {
       margin-top:-22px; 
     }
     .swiper_banner_list{
-      cursor: pointer;
       width:416px;
       display:inline-block;
       margin-left:32px;
