@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class='index_bg'>
+  <div class='index_bg'>
+    <div class='index_box'>
       <div class='index_circle_left'></div>
       <div class='index_text'>
         <ul>
@@ -48,93 +48,276 @@ export default {
     bottom:0;
     z-index:0;
     overflow:hidden;
+    text-align:center
   }
-  .index_circle_left{
-    position: absolute;
-    width: 24rem;
-    height: 24rem;
-    left: -7.5rem;
-    bottom: -7.5rem;
-    border-radius:120px;
-    background: #FE4905CC;
-    filter: blur(120px);
+  
+  @media  (max-width: 1680px){
+    .index_box{
+      margin-top:6rem;
+      width:1200px;
+      height:792px;
+      float:left;
+      position:absolute;
+      top:50%;
+      margin-top:-396px;
+      left:50%;
+      margin-left:-600px;
+    }
+    .index_text{
+      color:white;
+      margin-top: 238px;
+    }
+    .index_text ul{
+      text-align:left;
+      padding:0;
+      margin:0;
+    }
+    .index_text li{
+      list-style-type:none;
+      font-size: 58px;
+      line-height: 73px;
+      font-weight:bold;
+      font-family:'Georgia';
+    }
+    .index_text>div{
+      float:left;
+      width: 100px;
+      height: 30px;
+      background: #FE4905;
+      border-radius: 8px;
+      line-height: 30px;
+      font-size: 12px;
+      cursor: pointer;
+      text-align: center;
+      z-index:1;
+      margin-top:20px;
+      font-family:'DMSans-Medium';
+    }
+    .index_circle_box{
+        position:absolute;
+        width: 389px;
+        height: 389px;
+        right: 150px;
+        bottom: 150px;
+      }
+      .index_circle_right{
+        position: absolute;
+        left:0;
+        top: -60px;
+        width: 389px;
+        height: 389px;
+        border-radius: 194.5px;
+        background: #FE4905;
+        filter: blur(120px);
+        
+      }
+      .index_circle_gold1{
+        position:absolute;
+        width:209px;
+        height:209px;
+        top: 16px;
+        left: 116px;
+      }
+      .index_circle_gold2{
+        position: absolute;
+        width: 368px;
+        height: 308px;
+        left: 10px;
+        bottom: -120px;
+      }
+      .index_circle_gold3{
+        position: absolute;
+        width:209px;
+        height:209px;
+        top: -100px;
+        right: -80px;
+      }
+      .index_circle_gold4{
+        position: absolute;
+        width: 353px;
+        height: 403px;
+        bottom: -50px;
+        right: -220px;
+      }
+  }
+  @media screen and (min-width: 1680px) and (max-width: 1960px){
+    .index_box{
+      margin-top:6rem;
+      width:1680px;
+      height:1109px;
+      float:left;
+      position:absolute;
+      top:50%;
+      margin-top:-554px;
+      left:50%;
+      margin-left:-840px;
+    }
+    .index_text{
+      color:white;
+      margin-top: 333px;
+    }
+    .index_text ul{
+      text-align:left;
+      padding:0;
+      margin:0;
+    }
+    .index_text li{
+      list-style-type:none;
+      font-size: 81px;
+      line-height: 102px;
+      font-weight:bold;
+      font-family:'Georgia';
+    }
+    .index_text>div{
+      float:left;
+      width: 140px;
+      height: 42px;
+      background: #FE4905;
+      border-radius: 11px;
+      line-height: 42px;
+      font-size: 17px;
+      cursor: pointer;
+      text-align: center;
+      z-index:1;
+      margin-top:28px;
+      font-family:'DMSans-Medium';
+    }
+    .index_circle_box{
+        position:absolute;
+        width: 545px;
+        height: 545px;
+        right: 210px;
+        bottom: 210px;
+      }
+      .index_circle_right{
+        position: absolute;
+        left:0;
+        top: -84px;
+        width: 545px;
+        height: 545px;
+        border-radius: 272px;
+        background: #FE4905;
+        filter: blur(168px);
+        
+      }
+      .index_circle_gold1{
+        position:absolute;
+        width:293px;
+        height:293px;
+        top: 22px;
+        left: 162px;
+      }
+      .index_circle_gold2{
+        position: absolute;
+        width: 515px;
+        height: 431px;
+        left: 14px;
+        bottom: -168px;
+      }
+      .index_circle_gold3{
+        position: absolute;
+        width:293px;
+        height:293px;
+        top: -140px;
+        right: -112px;
+      }
+      .index_circle_gold4{
+        position: absolute;
+        width: 494px;
+        height: 564px;
+        bottom: -70px;
+        right: -308px;
+      }
     
   }
-  .index_circle_box{
-    position:absolute;
-    width: 38.9rem;
-    height: 38.9rem;
-    right: 15rem;
-    bottom: 5rem;
+  @media (min-width: 1960px){
+    .index_box{
+      margin-top:6rem;
+      width:1920px;
+      height:1267px;
+      float:left;
+      position:absolute;
+      top:50%;
+      margin-top:-634px;
+      left:50%;
+      margin-left:-960px;
+    }
+    .index_text{
+      color:white;
+      margin-top: 381px;
+    }
+    .index_text ul{
+      text-align:left;
+      padding:0;
+      margin:0;
+    }
+    .index_text li{
+      list-style-type:none;
+      font-size: 93px;
+      line-height: 117px;
+      font-weight:bold;
+      font-family:'Georgia';
+    }
+    .index_text>div{
+      float:left;
+      width: 160px;
+      height: 48px;
+      background: #FE4905;
+      border-radius: 13px;
+      line-height: 48px;
+      font-size: 19px;
+      cursor: pointer;
+      text-align: center;
+      z-index:1;
+      margin-top:32px;
+      font-family:'DMSans-Medium';
+    }
+    .index_circle_box{
+        position:absolute;
+        width: 622px;
+        height: 622px;
+        right: 240px;
+        bottom: 240px;
+      }
+      .index_circle_right{
+        position: absolute;
+        left:0;
+        top: -96px;
+        width: 622px;
+        height: 622px;
+        border-radius: 311px;
+        background: #FE4905;
+        filter: blur(192px);
+        
+      }
+      .index_circle_gold1{
+        position:absolute;
+        width:334px;
+        height:334px;
+        top: 26px;
+        left: 186px;
+      }
+      .index_circle_gold2{
+        position: absolute;
+        width: 589px;
+        height: 493px;
+        left: 16px;
+        bottom: -192px;
+      }
+      .index_circle_gold3{
+        position: absolute;
+        width:334px;
+        height:334px;
+        top: -160px;
+        right: -128px;
+      }
+      .index_circle_gold4{
+        position: absolute;
+        width: 565px;
+        height: 645px;
+        bottom: -80px;
+        right: -352px;
+      }
   }
-  .index_circle_right{
-    position: absolute;
-    left:0;
-    top: -6rem;
-    width: 38.9rem;
-    height: 38.9rem;
-    border-radius: 19.45rem;
-    background: #FE4905;
-    filter: blur(12.7rem);
-    
-  }
-  .index_circle_gold1{
-    position:absolute;
-    width:20.9rem;
-    height:20.9rem;
-    top: 5.6rem;
-    left: 11.6rem;
-  }
-  .index_circle_gold2{
-    position: absolute;
-    width: 36.8rem;
-    height: 30.8rem;
-    left: 1rem;
-    bottom: -12rem;
-  }
-  .index_circle_gold3{
-    position: absolute;
-    width:20.9rem;
-    height:20.9rem;
-    top: -8rem;
-    right: -8rem;
-  }
-  .index_circle_gold4{
-    position: absolute;
-    width: 35.3rem;
-    height: 40.3rem;
-    bottom: -5rem;
-    right: -22rem;
-  }
-  .index_text{
-    color:white;
-    margin-left: 75px;
-    margin-top: 12.8rem;
-  }
-  .index_text ul{
-    text-align:left;
-    padding:0;
-    margin:0;
-  }
-  .index_text li{
-    list-style-type:none;
-    font-size: 6.4rem;
-    line-height: 7.3rem;
-    font-weight:bold;
-    font-family:'Georgia';
-  }
-  .index_text>div{
-    float:left;
-    width: 10rem;
-    height: 3rem;
-    background: #FE4905;
-    border-radius: 0.8rem;
-    line-height: 3rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    text-align: center;
-    z-index:1;
-    margin-top:2rem;
-    font-family:'DMSans-Medium';
-  }
+  
 </style>

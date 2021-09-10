@@ -151,143 +151,585 @@ export default {
 </script>
 
 <style scoped>
-  .advisors{
-    width:100%;
-    margin:0;
-    padding:0;
-    float:left;
-  }
-  .advisors_list{
-    width: 80rem;
-    top:12rem;
-    margin: 0 auto;
-    overflow:hidden;
-  }
-  .advisors_list>div{
-    position:relative;
-    left:0;
-    top:0;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-between;
-    height:25rem;
-  }
-  .advisors_list>div>div{
-    width: 20rem;
-    margin-top: 3rem;
-    margin-right:5rem;
-    text-align:center;
-  }
-  .advisors_list>div>div:hover b{
-    color:#FE4905;
-  }
-  .advisors_list>div>div:hover span{
-    color:#FE4905;
-  }
-  .advisors_list>div>div>img{
-    width:14rem;
-    height:14rem;
-    border-radius: 7rem;
-    object-fit:cover;
-    margin:0 auto;
-  }
-  
-  .advisors_list>div>div>b{
-    font-family: 'Georgia';
-    font-size: 3rem;
-    width:100%;
-    text-align:center;
-    float:left;
-    margin:0;
-    line-height:6rem;
-  }
-  .advisors_list>div>div>span{
-    font-family: 'DMSans-Medium';
-    font-size: 2.2rem;
-    width:100%;
-    display:block;
-    text-align:center;
-  }
-  .team_introduce{
-    position:absolute;
-    left:-100%;
-    top:0;
-    bottom:0;
-    background:white;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-  }
-  .team_introduce>div:nth-child(1){
-    width:20rem;
-    height:100%;
-    display:inline-block;
-    text-align:center;
-    float:left;
-  }
-  .team_introduce>div:nth-child(2){
-    width:calc(100% - 20rem);
-    display:inline-block;
-    height:100%;
-    float:left;
-    background:#F2F2F3;
-    padding: 0 2rem;
-    text-align:left;
-    font-size:1.6rem;
-    box-sizing:border-box;
-  }
-  .team_introduce>div>img{
-    width:14rem;
-    height:14rem;
-    border-radius: 7rem;
-    object-fit:cover;
-    margin-top:3rem;
-  }
-  
-  .team_introduce>div>b{
-    font-family: 'Georgia';
-    font-size: 3rem;
-    width:100%;
-    text-align:center;
-    float:left;
-    margin:0;
-    line-height:6rem;
-  }
-  .team_introduce>div>span{
-    font-family: 'DMSans-Medium';
-    font-size: 2.2rem;
-    width:100%;
-    display:block;
-    text-align:center;
-  }
-  .team_introduce>div>p{
-    margin-top:2.2rem;
-    line-height:2rem;
-    font-family: 'Georgia';
-  }
-  .team_introduce>span{
-    position:absolute;
-    display:block;
-    right:0;
-    bottom:0;
-    width:2rem;
-    height:2rem;
-    text-align:center;
-    line-height:1.8rem;
-    color:white;
-    background:#FE4905;
-    z-index:2
-  }
-  .team_introduce>span>img{
-    width:60%;
-  }
-  .team_introduceActive{
-    left:0;
-    transition: left 1s;
-  }
-  .team_introduceHide{
-    left:-100%;
+  @media (max-width: 1200px){
+    .advisors{
+      width:960px;
+      height:480px;
+      position:relative;
+      left:50%;
+      margin-left:-480px;
+      overflow:hidden;
+      top:50%;
+      margin-top:-240px;
+    }
+    .advisors_list{
+      width: 640px;
+      top:96px;
+      margin: 0 auto;
+      overflow:hidden;
+    }
+    .advisors_list>div{
+      position:relative;
+      left:0;
+      top:0;
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+      height:200px;
+    }
+    .advisors_list>div>div{
+      width: 160px;
+      margin-top: 24px;
+      margin-right:40px;
+      text-align:center;
+    }
+    .advisors_list>div>div:hover b{
+      color:#FE4905;
+    }
+    .advisors_list>div>div:hover span{
+      color:#FE4905;
+    }
+    .advisors_list>div>div>img{
+      width:112px;
+      height:112px;
+      border-radius: 56px;
+      object-fit:cover;
+      margin:0 auto;
+    }
     
-    transition: left 0.5s;
+    .advisors_list>div>div>b{
+      font-family: 'Georgia';
+      font-size: 24px;
+      width:100%;
+      text-align:center;
+      float:left;
+      margin:0;
+      line-height:48px;
+    }
+    .advisors_list>div>div>span{
+      font-family: 'DMSans-Medium';
+      font-size: 18px;
+      width:100%;
+      display:block;
+      text-align:center;
+    }
+    .team_introduce{
+      position:absolute;
+      left:-100%;
+      top:0;
+      bottom:0;
+      background:white;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+    }
+    .team_introduce>div:nth-child(1){
+      width:160px;
+      height:100%;
+      display:inline-block;
+      text-align:center;
+      float:left;
+    }
+    .team_introduce>div:nth-child(2){
+      width:calc(100% - 160px);
+      display:inline-block;
+      height:100%;
+      float:left;
+      background:#F2F2F3;
+      padding: 0 16px;
+      text-align:left;
+      font-size:13px;
+      box-sizing:border-box;
+    }
+    .team_introduce>div>img{
+      width:112px;
+      height:112px;
+      border-radius: 56px;
+      object-fit:cover;
+      margin-top:24px;
+    }
+    
+    .team_introduce>div>b{
+      font-family: 'Georgia';
+      font-size: 24px;
+      width:100%;
+      text-align:center;
+      float:left;
+      margin:0;
+      line-height:48px;
+    }
+    .team_introduce>div>span{
+      font-family: 'DMSans-Medium';
+      font-size: 18px;
+      width:100%;
+      display:block;
+      text-align:center;
+    }
+    .team_introduce>div>p{
+      margin-top:18px;
+      line-height:16px;
+      font-family: 'Georgia';
+    }
+    .team_introduce>span{
+      position:absolute;
+      display:block;
+      right:0;
+      bottom:0;
+      width:16px;
+      height:16px;
+      text-align:center;
+      line-height:14px;
+      color:white;
+      background:#FE4905;
+      z-index:2
+    }
+    .team_introduce>span>img{
+      width:60%;
+    }
+    .team_introduceActive{
+      left:0;
+      transition: left 1s;
+    }
+    .team_introduceHide{
+      left:-100%;
+      
+      transition: left 0.5s;
+    }
   }
+  @media screen and (min-width: 1200px) and (max-width: 1680px){
+    .advisors{
+      width:1200px;
+      height:600px;
+      position:relative;
+      left:50%;
+      margin-left:-600px;
+      overflow:hidden;
+      top:50%;
+      margin-top:-300px;
+    }
+    .advisors_list{
+      width: 800px;
+      top:120px;
+      margin: 0 auto;
+      overflow:hidden;
+    }
+    .advisors_list>div{
+      position:relative;
+      left:0;
+      top:0;
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+      height:250px;
+    }
+    .advisors_list>div>div{
+      width: 200px;
+      margin-top: 30px;
+      margin-right:50px;
+      text-align:center;
+    }
+    .advisors_list>div>div:hover b{
+      color:#FE4905;
+    }
+    .advisors_list>div>div:hover span{
+      color:#FE4905;
+    }
+    .advisors_list>div>div>img{
+      width:140px;
+      height:140px;
+      border-radius: 70px;
+      object-fit:cover;
+      margin:0 auto;
+    }
+    
+    .advisors_list>div>div>b{
+      font-family: 'Georgia';
+      font-size: 30px;
+      width:100%;
+      text-align:center;
+      float:left;
+      margin:0;
+      line-height:60px;
+    }
+    .advisors_list>div>div>span{
+      font-family: 'DMSans-Medium';
+      font-size: 22px;
+      width:100%;
+      display:block;
+      text-align:center;
+    }
+    .team_introduce{
+      position:absolute;
+      left:-100%;
+      top:0;
+      bottom:0;
+      background:white;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+    }
+    .team_introduce>div:nth-child(1){
+      width:200px;
+      height:100%;
+      display:inline-block;
+      text-align:center;
+      float:left;
+    }
+    .team_introduce>div:nth-child(2){
+      width:calc(100% - 200px);
+      display:inline-block;
+      height:100%;
+      float:left;
+      background:#F2F2F3;
+      padding: 0 20px;
+      text-align:left;
+      font-size:16px;
+      box-sizing:border-box;
+    }
+    .team_introduce>div>img{
+      width:140px;
+      height:140px;
+      border-radius: 70px;
+      object-fit:cover;
+      margin-top:30px;
+    }
+    
+    .team_introduce>div>b{
+      font-family: 'Georgia';
+      font-size: 30px;
+      width:100%;
+      text-align:center;
+      float:left;
+      margin:0;
+      line-height:60px;
+    }
+    .team_introduce>div>span{
+      font-family: 'DMSans-Medium';
+      font-size: 22px;
+      width:100%;
+      display:block;
+      text-align:center;
+    }
+    .team_introduce>div>p{
+      margin-top:22px;
+      line-height:20px;
+      font-family: 'Georgia';
+    }
+    .team_introduce>span{
+      position:absolute;
+      display:block;
+      right:0;
+      bottom:0;
+      width:20px;
+      height:20px;
+      text-align:center;
+      line-height:18px;
+      color:white;
+      background:#FE4905;
+      z-index:2
+    }
+    .team_introduce>span>img{
+      width:60%;
+    }
+    .team_introduceActive{
+      left:0;
+      transition: left 1s;
+    }
+    .team_introduceHide{
+      left:-100%;
+      
+      transition: left 0.5s;
+    }
+  }
+  @media screen and (min-width: 1680px) and (max-width: 1960px){
+    .advisors{
+      width:1680px;
+      height:840px;
+      position:relative;
+      left:50%;
+      margin-left:-840px;
+      overflow:hidden;
+      top:50%;
+      margin-top:-420px;
+    }
+    .advisors_list{
+      width: 1120px;
+      top:168px;
+      margin: 0 auto;
+      overflow:hidden;
+    }
+    .advisors_list>div{
+      position:relative;
+      left:0;
+      top:0;
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+      height:350px;
+    }
+    .advisors_list>div>div{
+      width: 280px;
+      margin-top: 42px;
+      margin-right:70px;
+      text-align:center;
+    }
+    .advisors_list>div>div:hover b{
+      color:#FE4905;
+    }
+    .advisors_list>div>div:hover span{
+      color:#FE4905;
+    }
+    .advisors_list>div>div>img{
+      width:196px;
+      height:196px;
+      border-radius: 98px;
+      object-fit:cover;
+      margin:0 auto;
+    }
+    
+    .advisors_list>div>div>b{
+      font-family: 'Georgia';
+      font-size: 42px;
+      width:100%;
+      text-align:center;
+      float:left;
+      margin:0;
+      line-height:84px;
+    }
+    .advisors_list>div>div>span{
+      font-family: 'DMSans-Medium';
+      font-size: 31px;
+      width:100%;
+      display:block;
+      text-align:center;
+    }
+    .team_introduce{
+      position:absolute;
+      left:-100%;
+      top:0;
+      bottom:0;
+      background:white;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+    }
+    .team_introduce>div:nth-child(1){
+      width:280px;
+      height:100%;
+      display:inline-block;
+      text-align:center;
+      float:left;
+    }
+    .team_introduce>div:nth-child(2){
+      width:calc(100% - 280px);
+      display:inline-block;
+      height:100%;
+      float:left;
+      background:#F2F2F3;
+      padding: 0 28px;
+      text-align:left;
+      font-size:22px;
+      box-sizing:border-box;
+    }
+    .team_introduce>div>img{
+      width:196px;
+      height:196px;
+      border-radius: 98px;
+      object-fit:cover;
+      margin-top:42px;
+    }
+    
+    .team_introduce>div>b{
+      font-family: 'Georgia';
+      font-size: 42px;
+      width:100%;
+      text-align:center;
+      float:left;
+      margin:0;
+      line-height:84px;
+    }
+    .team_introduce>div>span{
+      font-family: 'DMSans-Medium';
+      font-size: 31px;
+      width:100%;
+      display:block;
+      text-align:center;
+    }
+    .team_introduce>div>p{
+      margin-top:31px;
+      line-height:28px;
+      font-family: 'Georgia';
+    }
+    .team_introduce>span{
+      position:absolute;
+      display:block;
+      right:0;
+      bottom:0;
+      width:28px;
+      height:28px;
+      text-align:center;
+      line-height:25px;
+      color:white;
+      background:#FE4905;
+      z-index:2
+    }
+    .team_introduce>span>img{
+      width:60%;
+    }
+    .team_introduceActive{
+      left:0;
+      transition: left 1s;
+    }
+    .team_introduceHide{
+      left:-100%;
+      
+      transition: left 0.5s;
+    }
+  }
+  @media (min-width: 1960px){
+    .advisors{
+      width:1920px;
+      height:960px;
+      position:relative;
+      left:50%;
+      margin-left:-960px;
+      overflow:hidden;
+      top:50%;
+      margin-top:-480px;
+    }
+    .advisors_list{
+      width: 1280px;
+      top:192px;
+      margin: 0 auto;
+      overflow:hidden;
+    }
+    .advisors_list>div{
+      position:relative;
+      left:0;
+      top:0;
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+      height:400px;
+    }
+    .advisors_list>div>div{
+      width: 320px;
+      margin-top: 48px;
+      margin-right:80px;
+      text-align:center;
+    }
+    .advisors_list>div>div:hover b{
+      color:#FE4905;
+    }
+    .advisors_list>div>div:hover span{
+      color:#FE4905;
+    }
+    .advisors_list>div>div>img{
+      width:224px;
+      height:224px;
+      border-radius: 112px;
+      object-fit:cover;
+      margin:0 auto;
+    }
+    
+    .advisors_list>div>div>b{
+      font-family: 'Georgia';
+      font-size: 48px;
+      width:100%;
+      text-align:center;
+      float:left;
+      margin:0;
+      line-height:96px;
+    }
+    .advisors_list>div>div>span{
+      font-family: 'DMSans-Medium';
+      font-size: 35px;
+      width:100%;
+      display:block;
+      text-align:center;
+    }
+    .team_introduce{
+      position:absolute;
+      left:-100%;
+      top:0;
+      bottom:0;
+      background:white;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+    }
+    .team_introduce>div:nth-child(1){
+      width:320px;
+      height:100%;
+      display:inline-block;
+      text-align:center;
+      float:left;
+    }
+    .team_introduce>div:nth-child(2){
+      width:calc(100% - 320px);
+      display:inline-block;
+      height:100%;
+      float:left;
+      background:#F2F2F3;
+      padding: 0 32px;
+      text-align:left;
+      font-size:26px;
+      box-sizing:border-box;
+    }
+    .team_introduce>div>img{
+      width:224px;
+      height:224px;
+      border-radius: 112px;
+      object-fit:cover;
+      margin-top:48px;
+    }
+    
+    .team_introduce>div>b{
+      font-family: 'Georgia';
+      font-size: 48px;
+      width:100%;
+      text-align:center;
+      float:left;
+      margin:0;
+      line-height:96px;
+    }
+    .team_introduce>div>span{
+      font-family: 'DMSans-Medium';
+      font-size: 35px;
+      width:100%;
+      display:block;
+      text-align:center;
+    }
+    .team_introduce>div>p{
+      margin-top:35px;
+      line-height:32px;
+      font-family: 'Georgia';
+    }
+    .team_introduce>span{
+      position:absolute;
+      display:block;
+      right:0;
+      bottom:0;
+      width:32px;
+      height:32px;
+      text-align:center;
+      line-height:29px;
+      color:white;
+      background:#FE4905;
+      z-index:2
+    }
+    .team_introduce>span>img{
+      width:60%;
+    }
+    .team_introduceActive{
+      left:0;
+      transition: left 1s;
+    }
+    .team_introduceHide{
+      left:-100%;
+      
+      transition: left 0.5s;
+    }
+  }
+  
 </style>
