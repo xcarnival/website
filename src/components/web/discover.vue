@@ -7,28 +7,28 @@
         <img class='ic_prev' src='../../assets/ic_prev.png' />
         <img class='ic_next' src='../../assets/ic_next.png' />
         <div class="swiper_banner_list" @click='goNews(1)'>
-          <img src='../../assets/discover1.png' />
+          <img src='../../assets/discover1.jpg' />
           <div>
             <span>Jun 28, 2021</span>
             <span>XCarnivfoutal lists on CMC, celebrating with airdrops</span>
           </div>
         </div>
         <div class="swiper_banner_list" @click='goNews(2)'>
-          <img src='../../assets/discover2.png' />
+          <img src='../../assets/discover2.jpg' />
           <div>
             <span>Jun 17, 2021</span>
             <span>XCarnival interview: the world needs better synthetic assets </span>
           </div>
         </div>
         <div class="swiper_banner_list" @click='goNews(3)'>
-          <img src='../../assets/discover1.png' />
+          <img src='../../assets/discover3.jpg' />
           <div>
             <span>Jun 10, 2021</span>
             <span>XCarnival Secures $2 Million Seed Investment</span>
           </div>
         </div>
         <div class="swiper_banner_list" @click='goNews(4)'>
-          <img src='../../assets/discover2.png' />
+          <img src='../../assets/discover4.jpg' />
           <div>
             <span>Jun 09, 2021</span>
             <span>XCarnival wins BSC Hackthon</span>
@@ -66,7 +66,7 @@ export default {
           window.open ("https://news.bitcoin.com/xcarnival-secures-2-million-seed-investment/")
           break;
         case 4:
-          window.open ("https://consent.yahoo.com/v2/collectConsent?sessionId=4_cc-session_3c40b2e0-616c-4256-b9fc-3f65595df31b")
+          window.open ("https://www.yahoo.com/news/xcarnival-wins-bsc-hackathon-four-041400960.html?guccounter=2")
           break;
         default:
           break;
