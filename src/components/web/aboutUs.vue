@@ -7,9 +7,9 @@
           <div class='swiper_list_introduce'>
             <h1>What's</h1>
             <h1>XCarnival?</h1>
-            <p>XCarnival is a lending aggregator for Metaverse assets which offers innovative liquidation solutions for varieties of NFT assets and long- tail crypto assets.</p>
+            <p>XCarnival: A Metaverse Assets Liquidation Aggregator for Everyone</p>
             <div>Unique Value Proposition</div>
-            <p>XCarnival not only provides easy-to-use financial products for users to create synthetic assets in DeFi, but also creates more liquidity in the DeFi market by allowing users to pledge and borrow NFTs and other Altcoin assets without having to sell them</p>
+            <p>XCarnival offers innovative liquidation solutions for varieties of NFT assets and long- tail crypto assets.</p>
           </div>
           <div>
             <img class='aboutUsImg' src='../../assets/aboutUsImg1.png' />
@@ -223,6 +223,7 @@ export default {
       font-family:'Georgia';
     }
     .swiper_list_introduce>p{
+      width:100%;
       font-size:14px;
       text-align:left;
       line-height:21px;
@@ -233,7 +234,6 @@ export default {
     .swiper_list_introduce>div{
       margin-top: 30px;
       border-bottom: 3px solid black;
-      text-indent: 50px;
       display:inline-block;
       line-height:50px;
       float:left;
@@ -438,6 +438,7 @@ export default {
       font-family:'Georgia';
     }
     .swiper_list_introduce>p{
+      width:100%;
       font-size:20px;
       text-align:left;
       line-height:29px;
@@ -448,7 +449,6 @@ export default {
     .swiper_list_introduce>div{
       margin-top: 42px;
       border-bottom: 4px solid black;
-      text-indent: 70px;
       display:inline-block;
       line-height:70px;
       float:left;
@@ -654,6 +654,7 @@ export default {
       font-family:'Georgia';
     }
     .swiper_list_introduce>p{
+      width:100%;
       font-size:22px;
       text-align:left;
       line-height:34px;
@@ -664,7 +665,6 @@ export default {
     .swiper_list_introduce>div{
       margin-top: 48px;
       border-bottom: 5px solid black;
-      text-indent: 80px;
       display:inline-block;
       line-height:80px;
       float:left;

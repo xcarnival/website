@@ -9,7 +9,6 @@
             <li @click='tabFun(3)' :class="[tabIndex == 3 ? 'tabHigh' : '']">Team</li>
             <li @click='tabFun(4)' :class="[tabIndex == 4 ? 'tabHigh' : '']">Investors & Partners</li>
             <li @click='tabFun(5)' :class="[tabIndex == 5 ? 'tabHigh' : '']">Discover</li>
-            
           </ul>
       </div>
     </div>
@@ -105,7 +104,7 @@ export default {
       cursor: pointer;
       line-height:13px;
       margin-top:15px;
-      font-size:8px;
+      font-size:12px;
       font-family:'DMSans-Medium';
     }
     .tabHigh{
@@ -158,7 +157,7 @@ export default {
       cursor: pointer;
       line-height:18px;
       margin-top:21px;
-      font-size:12px;
+      font-size: 16px;
       font-family:'DMSans-Medium';
     }
     .tabHigh{
@@ -211,7 +210,7 @@ export default {
       cursor: pointer;
       line-height:25px;
       margin-top:29px;
-      font-size:17px;
+      font-size:20px;
       font-family:'DMSans-Medium';
     }
     .tabHigh{
@@ -264,7 +263,7 @@ export default {
       cursor: pointer;
       line-height:29px;
       margin-top:34px;
-      font-size:19px;
+      font-size:24px;
       font-family:'DMSans-Medium';
     }
     .tabHigh{

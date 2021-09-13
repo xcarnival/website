@@ -87,6 +87,7 @@ export default {
     left:0;
     width:100%;
     height:21rem;
+		overflow:hidden;
   }
   .home_header_div{
     position:fixed;

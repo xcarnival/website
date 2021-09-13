@@ -8,7 +8,7 @@
           <li>for Everyone</li>
         </ul>
         <div @click='openPDF'>
-          Learn More >
+          Light Paper >
         </div>
       </div> -->
       <div class='index_circle_box'>

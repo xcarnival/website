@@ -4,4 +4,5 @@ module.exports = {
     assetsDir: 'static', //放置静态资源的目录
     indexPath: 'index.html', //html 的输出路径
     filenameHashing: true, //文件名哈希值
+
 }

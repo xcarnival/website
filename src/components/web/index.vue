@@ -9,7 +9,7 @@
           <li>for Everyone</li>
         </ul>
         <div @click='openPDF'>
-          Learn More >
+          Light Paper >
         </div>
       </div>
       <div class='index_circle_box'>
@@ -19,6 +19,14 @@
         <img src="../../assets/gold3.png" class='index_circle_gold3' />
         <img src="../../assets/gold4.png" class='index_circle_gold4' />
       </div>
+    </div>
+    <div class='footer'>
+      <ul>
+        <li @click='goWeb(index)' v-for="(item,index) in iconArr" :key='index' @mouseover="selectStyle (index) " @mouseout="outStyle(index)">
+          <img v-if='iconIndex == index' :src="require('../../assets/footer/'+item.iconUrlHover+'.svg')" />
+          <img v-else :src="require('../../assets/footer/'+item.iconUrl+'.svg')" />
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -30,9 +38,60 @@
 
 export default {
   name: 'index',
+  data(){
+    return {
+      iconIndex:'-1',
+      iconArr:[
+        { 
+          iconUrl : "1",
+          iconUrlHover : "11",
+          linkUrl : "https://github.com/orgs/xcarnival"
+        },
+        { 
+          iconUrl : "2",
+          iconUrlHover : "22",
+          linkUrl : "https://t.me/XCarnivalCommunity"
+        },
+        { 
+          iconUrl : "3",
+          iconUrlHover : "33",
+          linkUrl : "https://twitter.com/XCarnival_Lab"
+        },
+        { 
+          iconUrl : "4",
+          iconUrlHover : "44",
+          linkUrl : "https://discord.gg/uxMj96VqjE"
+        },
+        {
+          iconUrl : "5",
+          iconUrlHover : "55",
+          linkUrl : "https://www.linkedin.com/company/xcarnival"
+        },
+        {
+          iconUrl : "6",
+          iconUrlHover : "66",
+          linkUrl : "https://xcarnival-lab.medium.com/"
+        },
+        {
+          iconUrl : "7",
+          iconUrlHover : "77",
+          linkUrl : "https://youtube.com/channel/UCXHc6CBqN6olN3_WCMpc2bg"
+        }
+      ]
+    }
+  },
   methods: {
     openPDF(){
-      window.open('https://xcarnival.fi/assets/doc/lightpaper.pdf')
+      window.open('https://xcarnival.fi/doc/litepaper.pdf')
+    },
+    goWeb(index){
+      window.open(this.iconArr[index].linkUrl)
+    },
+    selectStyle(index){
+      this.iconIndex = index;
+    },
+    outStyle(){
+      this.iconIndex = '-1';
     }
   },
 }
@@ -51,7 +110,26 @@ export default {
     text-align:center
   }
   
+  
   @media  (max-width: 1680px){
+    .footer{
+      position:fixed;
+      width: 100%;
+      height:60px;
+      background:hsl(0deg 0% 0% / 10%);
+      bottom:0;
+    }
+    .footer>ul{
+      float:right;
+      margin-top:12px;
+    }
+    .footer>ul>li{
+      width:36px;
+      height:36px;
+      float:left;
+      margin-right:20px;
+      cursor:pointer;
+    }
     .index_box{
       margin-top:6rem;
       width:1200px;
@@ -81,7 +159,7 @@ export default {
     }
     .index_text>div{
       float:left;
-      width: 100px;
+      padding: 0 10px;
       height: 30px;
       background: #FE4905;
       border-radius: 8px;
@@ -103,12 +181,13 @@ export default {
       .index_circle_right{
         position: absolute;
         left:0;
-        top: -60px;
-        width: 389px;
-        height: 389px;
-        border-radius: 194.5px;
-        background: #FE4905;
-        filter: blur(120px);
+        top: -100px;
+        width: 450px;
+        height: 450px;
+        border-radius: 225px;
+        background: rgb(254 73 5);
+        filter: blur(60px);
+        opacity:0.5;
         
       }
       .index_circle_gold1{
@@ -141,6 +220,24 @@ export default {
       }
   }
   @media screen and (min-width: 1680px) and (max-width: 1960px){
+    .footer{
+      position:fixed;
+      width: 100%;
+      height: 60px;
+      background:hsl(0deg 0% 0% / 10%);
+      bottom:0;
+    }
+    .footer>ul{
+      float:right;
+      margin-top:12px;
+    }
+    .footer>ul>li{
+      width:36px;
+      height:36px;
+      float:left;
+      margin-right:30px;
+      cursor:pointer;
+    }
     .index_box{
       margin-top:6rem;
       width:1680px;
@@ -170,7 +267,7 @@ export default {
     }
     .index_text>div{
       float:left;
-      width: 140px;
+      padding: 0 10px;
       height: 42px;
       background: #FE4905;
       border-radius: 11px;
@@ -231,6 +328,24 @@ export default {
     
   }
   @media (min-width: 1960px){
+    .footer{
+      position:fixed;
+      width: 100%;
+      height: 60px;
+      background:hsl(0deg 0% 0% / 10%);
+      bottom:0;
+    }
+    .footer>ul{
+      float:right;
+      margin-top:12px;
+    }
+    .footer>ul>li{
+      width:36px;
+      height:36px;
+      float:left;
+      margin-right:30px;
+      cursor:pointer;
+    }
     .index_box{
       margin-top:6rem;
       width:1920px;
@@ -260,7 +375,7 @@ export default {
     }
     .index_text>div{
       float:left;
-      width: 160px;
+      padding: 0 10px;
       height: 48px;
       background: #FE4905;
       border-radius: 13px;
