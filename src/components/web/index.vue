@@ -4,7 +4,7 @@
       <div class='index_circle_left'></div>
       <div class='index_text'>
         <ul>
-          <li>A Metaverse Assets </li>
+          <li>The Metaverse Assets </li>
           <li>Liquidation Aggregator </li>
           <li>for Everyone</li>
         </ul>

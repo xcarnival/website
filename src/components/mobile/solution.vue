@@ -1,15 +1,12 @@
 <template>
   <div class='solution'>
-    <img src='../../assets/ic_down.svg' class="ic_down" :class="activeClass?'ic_active':'ic_hide'" @click='nextSwiper'>
-    <swiper ref="mySwiper" :options="swiperOptions" class='swiper-grid swiper_box swiper-no-swiping' >
+    <img src='../../assets/ic_down_m.png' class="ic_down" :class="activeClass?'ic_active':'ic_hide'" @click='nextSwiper'>
+    <swiper ref="mySwiper" :options="swiperOptions" class='swiper-grid swiper_box ' >
       <swiperSlide class='swiperSlide'>
         <div class='swiper_list'>
-          <div class='swiper_list_line'>
-            <span>
-              Pain Points of current lending markets
-            </span>
-          </div>
           <div class='swiper_list_introduce'>
+            <h1>Pain Points of current lending markets</h1>
+            <b></b>
             <h2>NFT as collateral? Not Accepted</h2>
             <p>NFTs can not be used as collateral.
               <br />Everybody knows NFT is amazing, NFT is the key foundation for Metaverse but currently almost no lending platforms treat NFTs as stable and valuable assets.
@@ -24,9 +21,6 @@
       </swiperSlide>
       <swiperSlide class='swiperSlide'>
         <div class='swiper_list swiper_list2'>
-          <div>
-            <img class='aboutUsImg2' src='../../assets/solutionImg.png' />    
-          </div>
           <div class='swiper_list_introduce swiper_list_introduce2'>
             <h1>Solution</h1>
             <h1>Matrix</h1>
@@ -35,29 +29,29 @@
             <p>XCarnival's original time-limited auction clearing mechanism. The pledge model is optimized for special types of assets with extremely poor liquidity, such as NFTs.</p>
             <h2>Megabox</h2>
             <p>Allows users to unlock the liquidation of their long-tail assets which have relatively limited liquidity (such as Altcoins and LPs).</p>
+            <img class='aboutUsImg' src='../../assets/solutionImg.png' />    
           </div>
         </div>  
       </swiperSlide>
       <swiperSlide class='swiperSlide'>
         <div class='swiper_list3'>
-          <h1>XCarnival’s</h1>
-          <h1>4 Competitive Advances</h1>
+          <h1>XCarnival’s <br /> 4 Competitive Advances</h1>
           <div class='swiper_list_solution'>
             <div >
-              <span>1</span>
-              <div>XCarnival’s products could be used for lending and pledging of all kinds of NFTs, including celebrity NFTs,Virtual identity, financial NFTs, and Loyalty NFTs. Its third-party platform operating model can contain the risks within each transaction, so as to avoid systemic risks and bad debts.</div>
+              <div><span>1</span><b></b></div>
+              <p>XCarnival’s products could be used for lending and pledging of all kinds of NFTs, including celebrity NFTs,Virtual identity, financial NFTs, and Loyalty NFTs. Its third-party platform operating model can contain the risks within each transaction, so as to avoid systemic risks and bad debts.</p>
             </div>
             <div>
-              <span>2</span>
-              <div>XCarnival believes “Everything is collateralized”, which is in line with the development of Metaverse. XCarnival is already working with Metaverse projects to provide liquidity, such as the exclusive lending and pledging services for USM’s NFTs in the metaverse.</div>
+              <div><span>2</span><b></b></div>
+              <p>XCarnival believes “Everything is collateralized”, which is in line with the development of Metaverse. XCarnival is already working with Metaverse projects to provide liquidity, such as the exclusive lending and pledging services for USM’s NFTs in the metaverse.</p>
             </div>
             <div>
-              <span>3</span>
-              <div>Through its mining mechanism, the XCarnival platform allows users to form a habit with NFT pledging and lending, which is one of the first in the industry, with first-to-market advantages.</div>
+              <div><span>3</span><b></b></div>
+              <p>Through its mining mechanism, the XCarnival platform allows users to form a habit with NFT pledging and lending, which is one of the first in the industry, with first-to-market advantages.</p>
             </div>
             <div>
-              <span>4</span>
-              <div>With rapid development of the NFT market, lending & Pledging is the infrastructure of the industry, with huge potentials and demand.</div>
+              <div><span>4</span><b></b></div>
+              <p>With rapid development of the NFT market, lending & Pledging is the infrastructure of the industry, with huge potentials and demand.</p>
             </div>
           </div>
         </div>
@@ -128,7 +122,15 @@ export default {
 </script>
 
 <style scoped>
+  
   .ic_down{
+    position:fixed;
+    width:0.35rem;
+    height:0.35rem;
+    left:50%;
+    margin-left:-0.175rem;
+    bottom:0.3rem;
+    z-index: 2;
     animation: icDownTranslate 2s infinite;
   }
   @keyframes icDownTranslate {
@@ -142,202 +144,200 @@ export default {
         transform: translate(0px, 0px);
     }
   }
-  @media (max-width: 1200px){
+  
     .solution{
-      width:960px;
-      height:480px;
-      position:relative;
-      left:50%;
-      margin-left:-480px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-240px;
-    }
-    .swiper_list{
       width:100%;
       position:absolute;
+      left:0;
+      top:0.66rem;
       bottom:0;
+      overflow:hidden;
+    }
+    .swiper_list{
+      position:absolute;
+      overflow:hidden;  
+      height:100%;
+      width:100%;
+      left:0;
       top:0;
       background:white;
     }
-    .aboutUsImg{
+    .swiper_list3{
+      width:100%;
+      position:relative;
+      bottom:0;
+      top:0;
       height:100%;
-      margin-top:40px;
+      background:white;
+      overflow-y:scroll;
+      padding-bottom:0.5rem;
+    }
+    .aboutUsImg{
+      width:100%;
+      margin-top:0.2rem;
+      object-fit:cover;
     }
     .aboutUsImg2{
-      width:80%;
-      float:right
+      height:90%;
     }
     .swiper_list>div{
+      text-align:center;
       position:relative;
-      width:50%;
+      width:100%;
       float:left;
       display:inline-block;
-      height:90%;
-      margin-top:3%;
+      height:100%;
       box-sizing:border-box;
     }
-    .swiper_list_line{
-      border-right:2px solid black;
-    }
-    .swiper_list>div>span{
-      font-size:51px;
-      line-height:54px;
-      font-weight: bold;
-      margin-left:40px;
-      margin-left:8px;
-      display:block;
-      font-family:'Georgia'
-    }
-    
-    .swiper_list_introduce2{
-      padding-right:24px;
-    }
-    .swiper_list_introduce>h1{
-      font-size:51px;
-      line-height:64px;
-      margin:0;
-      text-indent:16px;
-      font-weight:bold;
-      text-align:left;
-      font-family:'Georgia'
-    }
-    .swiper_list_introduce>h2{
-      font-size:24px;
-      line-height:40px;
-      margin:0;
-      text-indent:16px;
-      font-weight:bold;
-      text-align:left;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_list_introduce>p{
-      margin-left:16px;
-      font-size:11px;
-      text-align:left;
-      line-height:16px;
-      float:left;
-      font-weight:bold;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_list_introduce>div{
-      margin-top: 24px;
-      border-bottom: 2px solid black;
-      text-indent: 40px;
-      display:inline-block;
-      line-height:40px;
-      float:left;
-      font-size:13px;
-      font-weight:bold;
-    }
-    .swiper_list_introduce>b{
-      margin-top: 24px;
-      margin-bottom: 24px;
-      border-bottom:2px solid black;
-      text-indent: 40px;
-      display:block;
-      width: 160px;
-      margin-left:16px;
-    }
-    .swiper_list_introduce>h2{
-      margin:32px 0 0 16px;
-      font-size:24px;
-      font-weight:bold;
-      line-height:28px;
-      text-align:left;
-    }
-    .swiper_list_introduce2>h2{
-      margin-left:0;
-    }
-    .ic_down{
-      position:fixed;
-      width:60px;
-      height:60px;
-      left:24px;
-      bottom:24px;
-      z-index:3;
-    }
-    .advisors_list{
-      width: calc(100% - 112px);
-      margin-left: 40px;
-      height:100%;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-    }
-    .advisors_list>div img{
-      height:100%;
-    }
-    .advisors_list>div{
-      width: calc(calc(100% - 16px)/3);
-      height: 49%;
-    }
-    .swiper_list3{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      background:white;
+    .swiper_list_introduce{
+      padding-top:0.2rem;
     }
     .swiper_list3>h1{
-      font-size:51px;
-      line-height:64px;
-      font-weight: bold;
-      width:100%;
-      text-align:center;
-      font-family:'Georgia'
+      width:calc(100% - 0.32rem);
+      margin-left:0.16rem;
+      font-size:0.26rem;
+      line-height:0.3rem;
+      font-weight:bold;
+      text-align:left;
+      font-family:'Georgia';
+      margin-top:0.2rem;
     }
-    .swiper_list_solution{
-      width: 720px;
+    .swiper_list3>b{
+      margin: 0.2rem 0;
+      border-bottom:0.03rem solid black;
+      display:block;
+      width: 2.2rem;
+    }
+    .swiper_list_introduce>h1{
+      width:calc(100% - 0.32rem);
+      margin-left:0.16rem;
+      font-size:0.26rem;
+      line-height:0.3rem;
+      font-weight:bold;
+      text-align:left;
+      font-family:'Georgia';
+    }
+    .swiper_list_introduce>p{
+      
+      font-size:0.12rem;
+      width:calc(100% - 0.32rem);
+      margin:0.1rem 0 0.1rem 0.16rem;
+      text-align:left;
+      line-height:0.2rem;
+      font-family:'DMSans-Regular';
+      float:left;
+    }
+    .swiper_list_introduce>div{
+      margin-top: 0.1rem;
+      border-bottom: 0.03rem solid black;
+      position:relative;
+      display:inline-block;
+      line-height:0.3rem;
+      float:left;
+      font-size:0.16rem;
+      font-weight:bold;
+      font-family:'DMSans-Medium';
+      text-indent: 0.16rem;
+    }
+    .swiper_list_introduce>b{
+      margin: 0.1rem 0;
+      border-bottom:0.03rem solid black;
+      display:block;
+      width: 2.2rem;
+    }
+    .swiper_list_introduce>h2{
+      width:calc(100% - 0.32rem);
+      margin-left:0.16rem;
+      font-size:0.14rem;
+      font-weight:bold;
+      line-height:0.3rem;
+      text-align:left;
+      font-family:'DMSans-Regular';
+    }
+    
+    
+    .swiper_list3_charts{
       position:absolute;
+      width:calc(100% - 0.32rem);
+      height:80%;
+      margin-left:0.16rem;
       bottom:0;
-      left:50%;
-      margin-left:-360px;
-      height: 60%;
+      padding-top:30px;
+    }
+    .swiper_list3_charts>div{
+      width:20%;
+      border-left:1px dashed #9D9DA8 ;
+      height:100%;
+      display:inline-block;
+      float:left;
+      box-sizing:border-box;
+      position:relative;
       display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-      margin-top:16px;
+      flex-direction: column-reverse;
+      align-items:flex-end;
     }
-    .swiper_list_solution>div{
-      width: calc(calc(100% - 16px)/2);
-      height: 40%;
-      display:inline-block;
-      float:left;
+    .swiper_list3_charts>div h3{
+      display: block;
+      width:80%;
+      font-size:0.14rem;
+      font-weight:bold;
+      font-family:'DMSans-Medium';
     }
-    .swiper_list_solution>div>span{
-      width: 48px;
-      height: 48px;
-      margin-right:16px;
-      border-radius:24px;
-      background: #EEEEF5;
-      text-align:center;
-      line-height: 48px;
-      font-size: 24px;
-      color: #9D9DA8;
-      display: inline-block;
-      float:left;
+    .swiper_list3_charts>div div{
+      box-sizing:border-box;
+      width: 100%;
+      position:relative;
+      margin-top: 0.2rem;
+      font-family:'DMSans-Medium';
     }
-    .swiper_list_solution>div>div{
-      font-size: 11px;
-      line-height: 18px;
-      float:left;
-      display:inline-block;
-      width:calc(100% - 64px);
-      font-family:'DMSans-Medium'
+    .swiper_list3_charts>div:nth-child(1) div{
+      background: #FE4905;
+      height:30%;
     }
+    .swiper_list3_charts>div:nth-child(2) div{
+      background: #F96209;
+      height:55%;
+    }
+    .swiper_list3_charts>div:nth-child(3) div{
+      background: #F4740B;
+      height:78%;
+    }
+    .swiper_list3_charts>div:nth-child(4) div{
+      background: #F68906;
+      height:85%;
+    }
+    .swiper_list3_charts>div:nth-child(5) div{
+      background: #FFA604;
+      height:100%;
+      margin-top:0;
+    }
+    .swiper_list3_charts>div:nth-child(5) h3{
+      position:absolute;
+      top:-0.6rem;
+    }
+    .swiper_list3_charts>div p{
+      display:list-item; 
+      list-style-type:disc; 
+      margin-left:0.15rem;
+      color:white;
+      font-size:0.08rem;
+      font-weight:bold;
+    }
+    
     .swiperSlide{
       width:100%;
       position:relative;
       left:0;
       top:0;
     }
-    .swiper_box{
-      position:absolute;
-      width:100%;
-      left:0;
-      top:0;
-      bottom:0;
+    .swiper-wrapper{
+      flex-wrap:wrap !important;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
       flex-wrap:wrap;
     }
     .ic_active{
@@ -348,627 +348,46 @@ export default {
       opacity:0;
       transition: opacity 0.1s;
     }
-  }
-  @media screen and (min-width: 1200px) and (max-width: 1680px){
-    .solution{
-      width:1200px;
-      height:600px;
-      position:relative;
-      left:50%;
-      margin-left:-600px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-300px;
-    }
-    .swiper_list{
-      width:100%;
-      position:absolute;
-      bottom:0;
-      top:0;
-      background:white;
-    }
-    .aboutUsImg{
-      height:100%;
-      margin-top:50px;
-    }
-    .aboutUsImg2{
-      width:80%;
-      float:right
-    }
-    .swiper_list>div{
-      position:relative;
-      width:50%;
-      float:left;
-      display:inline-block;
-      height:90%;
-      margin-top:3%;
-      box-sizing:border-box;
-    }
-    .swiper_list_line{
-      border-right:3px solid black;
-    }
-    .swiper_list>div>span{
-      font-size:64px;
-      line-height:68px;
-      font-weight: bold;
-      margin-left:50px;
-      margin-left:10px;
-      display:block;
-      font-family:'Georgia'
-    }
-    
-    .swiper_list_introduce2{
-      padding-right:30px;
-    }
-    .swiper_list_introduce>h1{
-      font-size:64px;
-      line-height:80px;
-      margin:0;
-      text-indent:20px;
-      font-weight:bold;
-      text-align:left;
-      font-family:'Georgia'
-    }
-    .swiper_list_introduce>h2{
-      font-size:30px;
-      line-height:50px;
-      margin:0;
-      text-indent:20px;
-      font-weight:bold;
-      text-align:left;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_list_introduce>p{
-      margin-left:20px;
-      font-size:14px;
-      text-align:left;
-      line-height:20px;
-      float:left;
-      font-weight:bold;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_list_introduce>div{
-      margin-top: 30px;
-      border-bottom: 3px solid black;
-      text-indent: 50px;
-      display:inline-block;
-      line-height:50px;
-      float:left;
-      font-size:16px;
-      font-weight:bold;
-    }
-    .swiper_list_introduce>b{
-      margin-top: 30px;
-      margin-bottom: 30px;
-      border-bottom:3px solid black;
-      text-indent: 50px;
-      display:block;
-      width: 200px;
-      margin-left:20px;
-    }
-    .swiper_list_introduce>h2{
-      margin:40px 0 0 20px;
-      font-size:30px;
-      font-weight:bold;
-      line-height:35px;
-      text-align:left;
-    }
-    .swiper_list_introduce2>h2{
-      margin-left:0;
-    }
-    .ic_down{
-      position:fixed;
-      width:60px;
-      height:60px;
-      left:30px;
-      bottom:30px;
-      z-index:3;
-    }
-    .advisors_list{
-      width: calc(100% - 140px);
-      margin-left: 50px;
-      height:100%;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-    }
-    .advisors_list>div img{
-      height:100%;
-    }
-    .advisors_list>div{
-      width: calc(calc(100% - 20px)/3);
-      height: 49%;
-    }
-    .swiper_list3{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      background:white;
-    }
-    .swiper_list3>h1{
-      font-size:64px;
-      line-height:80px;
-      font-weight: bold;
-      width:100%;
-      text-align:center;
-      font-family:'Georgia'
-    }
     .swiper_list_solution{
-      width: 900px;
-      position:absolute;
-      bottom:0;
-      left:50%;
-      margin-left:-450px;
-      height: 60%;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-      margin-top:20px;
+      width:calc(100% - 0.16rem);
+      margin-left:0.16rem;
     }
     .swiper_list_solution>div{
-      width: calc(calc(100% - 20px)/2);
-      height: 40%;
-      display:inline-block;
-      float:left;
-    }
-    .swiper_list_solution>div>span{
-      width: 60px;
-      height: 60px;
-      margin-right:20px;
-      border-radius:30px;
-      background: #EEEEF5;
-      text-align:center;
-      line-height: 60px;
-      font-size: 30px;
-      color: #9D9DA8;
-      display: inline-block;
-      float:left;
+      width:100%;
+      margin-top:0.2rem;
     }
     .swiper_list_solution>div>div{
-      font-size: 14px;
-      line-height: 22px;
-      float:left;
-      display:inline-block;
-      width:calc(100% - 80px);
-      font-family:'DMSans-Medium'
-    }
-    .swiperSlide{
+      height:0.25rem;
       width:100%;
       position:relative;
-      left:0;
-      top:0;
     }
-    .swiper_box{
-      position:absolute;
-      width:100%;
-      left:0;
-      top:0;
-      bottom:0;
-      flex-wrap:wrap;
-    }
-    .ic_active{
-      opacity:1;
-      transition: opacity 0.5s;
-    }
-    .ic_hide{
-      opacity:0;
-      transition: opacity 0.1s;
-    }
-  }
-  @media screen and (min-width: 1680px) and (max-width: 1960px){
-    .solution{
-      width:1680px;
-      height:840px;
-      position:relative;
-      left:50%;
-      margin-left:-840px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-420px;
-    }
-    .swiper_list{
-      width:100%;
-      position:absolute;
-      bottom:0;
-      top:0;
-      background:white;
-    }
-    .aboutUsImg{
-      height:100%;
-      margin-top:70px;
-    }
-    .aboutUsImg2{
-      width:80%;
-      float:right
-    }
-    .swiper_list>div{
-      position:relative;
-      width:50%;
-      float:left;
+    .swiper_list_solution>div>div span{
       display:inline-block;
-      height:90%;
-      margin-top:3%;
-      box-sizing:border-box;
-    }
-    .swiper_list_line{
-      border-right:4px solid black;
-    }
-    .swiper_list>div>span{
-      font-size:90px;
-      line-height:95px;
-      font-weight: bold;
-      margin-left:70px;
-      margin-left:14px;
-      display:block;
-      font-family:'Georgia'
-    }
-    
-    .swiper_list_introduce2{
-      padding-right:42px;
-    }
-    .swiper_list_introduce>h1{
-      font-size:90px;
-      line-height:112px;
-      margin:0;
-      text-indent:28px;
-      font-weight:bold;
-      text-align:left;
-      font-family:'Georgia'
-    }
-    .swiper_list_introduce>h2{
-      font-size:42px;
-      line-height:70px;
-      margin:0;
-      text-indent:28px;
-      font-weight:bold;
-      text-align:left;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_list_introduce>p{
-      margin-left:28px;
-      font-size:20px;
-      text-align:left;
-      line-height:28px;
-      float:left;
-      font-weight:bold;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_list_introduce>div{
-      margin-top: 42px;
-      border-bottom: 4px solid black;
-      text-indent: 70px;
-      display:inline-block;
-      line-height:70px;
-      float:left;
-      font-size:22px;
-      font-weight:bold;
-    }
-    .swiper_list_introduce>b{
-      margin-top: 42px;
-      margin-bottom: 42px;
-      border-bottom:4px solid black;
-      text-indent: 70px;
-      display:block;
-      width: 280px;
-      margin-left:28px;
-    }
-    .swiper_list_introduce>h2{
-      margin:56px 0 0 28px;
-      font-size:42px;
-      font-weight:bold;
-      line-height:49px;
-      text-align:left;
-    }
-    .swiper_list_introduce2>h2{
-      margin-left:0;
-    }
-    .ic_down{
-      position:fixed;
-      width:60px;
-      height:60px;
-      left:42px;
-      bottom:42px;
-      z-index:3;
-    }
-    .advisors_list{
-      width: calc(100% - 196px);
-      margin-left: 70px;
-      height:100%;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-    }
-    .advisors_list>div img{
-      height:100%;
-    }
-    .advisors_list>div{
-      width: calc(calc(100% - 28px)/3);
-      height: 49%;
-    }
-    .swiper_list3{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      background:white;
-    }
-    .swiper_list3>h1{
-      font-size:90px;
-      line-height:112px;
-      font-weight: bold;
-      width:100%;
+      width:0.25rem;
+      height:0.25rem;
+      border-radius: 0.125rem;
+      background:#EEEEEE;
       text-align:center;
-      font-family:'Georgia'
-    }
-    .swiper_list_solution{
-      width: 1260px;
-      position:absolute;
-      bottom:0;
-      left:50%;
-      margin-left:-630px;
-      height: 60%;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-      margin-top:28px;
-    }
-    .swiper_list_solution>div{
-      width: calc(calc(100% - 28px)/2);
-      height: 40%;
-      display:inline-block;
+      line-height:0.25rem;
+      font-size:0.14rem;
       float:left;
+      font-family:'DMSans-Medium';
     }
-    .swiper_list_solution>div>span{
-      width: 84px;
-      height: 84px;
-      margin-right:28px;
-      border-radius:42px;
-      background: #EEEEF5;
-      text-align:center;
-      line-height: 84px;
-      font-size: 42px;
-      color: #9D9DA8;
-      display: inline-block;
-      float:left;
+    .swiper_list_solution>div>div b{
+      width:calc(100% - 0.35rem);
+      float:right;
+      height:0.01rem;
+      margin-top:0.12rem;
+      background:#FE4905;
+      font-family:'DMSans-Medium';
     }
-    .swiper_list_solution>div>div{
-      font-size: 20px;
-      line-height: 31px;
-      float:left;
-      display:inline-block;
-      width:calc(100% - 112px);
-      font-family:'DMSans-Medium'
-    }
-    .swiperSlide{
-      width:100%;
-      position:relative;
-      left:0;
-      top:0;
-    }
-    .swiper_box{
-      position:absolute;
-      width:100%;
-      left:0;
-      top:0;
-      bottom:0;
-      flex-wrap:wrap;
-    }
-    .ic_active{
-      opacity:1;
-      transition: opacity 0.5s;
-    }
-    .ic_hide{
-      opacity:0;
-      transition: opacity 0.1s;
-    }
-  }
-  @media (min-width: 1960px){
-    .solution{
-      width:1915px;
-      height:958px;
-      position:relative;
-      left:50%;
-      margin-left:-958px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-479px;
-    }
-    .swiper_list{
-      width:100%;
-      position:absolute;
-      bottom:0;
-      top:0;
-      background:white;
-    }
-    .aboutUsImg{
-      height:100%;
-      margin-top:80px;
-    }
-    .aboutUsImg2{
-      width:80%;
-      float:right
-    }
-    .swiper_list>div{
-      position:relative;
-      width:50%;
-      float:left;
-      display:inline-block;
-      height:90%;
-      margin-top:3%;
-      box-sizing:border-box;
-    }
-    .swiper_list_line{
-      border-right:5px solid black;
-    }
-    .swiper_list>div>span{
-      font-size:103px;
-      line-height:108px;
-      font-weight: bold;
-      margin-left:80px;
-      margin-left:16px;
+    .swiper_list_solution>div p{
+      font-size:0.12rem;
+      font-family:'DMSans-Medium';
+      width:calc(100% - 0.16rem);
       display:block;
-      font-family:'Georgia'
     }
-    
-    .swiper_list_introduce2{
-      padding-right:48px;
-    }
-    .swiper_list_introduce>h1{
-      font-size:103px;
-      line-height:128px;
-      margin:0;
-      text-indent:32px;
-      font-weight:bold;
-      text-align:left;
-      font-family:'Georgia'
-    }
-    .swiper_list_introduce>h2{
-      font-size:48px;
-      line-height:80px;
-      margin:0;
-      text-indent:32px;
-      font-weight:bold;
-      text-align:left;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_list_introduce>p{
-      margin-left:32px;
-      font-size:23px;
-      text-align:left;
-      line-height:32px;
-      float:left;
-      font-weight:bold;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_list_introduce>div{
-      margin-top: 48px;
-      border-bottom: 5px solid black;
-      text-indent: 80px;
-      display:inline-block;
-      line-height:80px;
-      float:left;
-      font-size:25px;
-      font-weight:bold;
-    }
-    .swiper_list_introduce>b{
-      margin-top: 48px;
-      margin-bottom: 48px;
-      border-bottom:5px solid black;
-      text-indent: 80px;
-      display:block;
-      width: 319px;
-      margin-left:32px;
-    }
-    .swiper_list_introduce>h2{
-      margin:64px 0 0 32px;
-      font-size:48px;
-      font-weight:bold;
-      line-height:56px;
-      text-align:left;
-    }
-    .swiper_list_introduce2>h2{
-      margin-left:0;
-    }
-    .ic_down{
-      position:fixed;
-      width:60px;
-      height:60px;
-      left:48px;
-      bottom:48px;
-      z-index:3;
-    }
-    .advisors_list{
-      width: calc(100% - 223px);
-      margin-left: 80px;
-      height:100%;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-    }
-    .advisors_list>div img{
-      height:100%;
-    }
-    .advisors_list>div{
-      width: calc(calc(100% - 32px)/3);
-      height: 49%;
-    }
-    .swiper_list3{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      background:white;
-    }
-    .swiper_list3>h1{
-      font-size:103px;
-      line-height:128px;
-      font-weight: bold;
-      width:100%;
-      text-align:center;
-      font-family:'Georgia'
-    }
-    .swiper_list_solution{
-      width: 1436px;
-      position:absolute;
-      bottom:0;
-      left:50%;
-      margin-left:-718px;
-      height: 60%;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-      margin-top:32px;
-    }
-    .swiper_list_solution>div{
-      width: calc(calc(100% - 32px)/2);
-      height: 40%;
-      display:inline-block;
-      float:left;
-    }
-    .swiper_list_solution>div>span{
-      width: 96px;
-      height: 96px;
-      margin-right:32px;
-      border-radius:48px;
-      background: #EEEEF5;
-      text-align:center;
-      line-height: 96px;
-      font-size: 48px;
-      color: #9D9DA8;
-      display: inline-block;
-      float:left;
-    }
-    .swiper_list_solution>div>div{
-      font-size: 23px;
-      line-height: 35px;
-      float:left;
-      display:inline-block;
-      width:calc(100% - 128px);
-      font-family:'DMSans-Medium'
-    }
-    .swiperSlide{
-      width:100%;
-      position:relative;
-      left:0;
-      top:0;
-    }
-    .swiper_box{
-      position:absolute;
-      width:100%;
-      left:0;
-      top:0;
-      bottom:0;
-      flex-wrap:wrap;
-    }
-    .ic_active{
-      opacity:1;
-      transition: opacity 0.5s;
-    }
-    .ic_hide{
-      opacity:0;
-      transition: opacity 0.1s;
-    }
-  }
+
+
   
 </style>

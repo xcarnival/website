@@ -1,18 +1,21 @@
 <template>
-  <div class='aboutUs'>
-    <div class="swiper_list4">
-      <h1>Discover</h1>
-      <p>News</p>
-      <div class="swiper_banner">
-        <img class='ic_prev' src='../../assets/ic_prev.png' />
-        <img class='ic_next' src='../../assets/ic_next.png' />
-        <div class="swiper_banner_list" @click='goNews(1)'>
+  <div class='discover'>
+    <h1>Discover</h1>
+    <p>News</p>
+    <b></b>
+    <div class='ic_swiper_button ic_prev'><img src="../../assets/ic_prev.png" @click="prev" /></div>
+    <div class='ic_swiper_button ic_next'><img src="../../assets/ic_next.png" @click="next" /></div>
+    <swiper ref="mySwiper" :options="swiperOptions" class='swiper_banner'>
+      <swiperSlide>
+        <div class="swiper_banner_list" @click='goNews(2)'>
           <img src='../../assets/discover1.jpg' />
           <div>
             <span>Jun 28, 2021</span>
             <span>XCarnivfoutal lists on CMC, celebrating with airdrops</span>
           </div>
         </div>
+      </swiperSlide>
+      <swiperSlide>
         <div class="swiper_banner_list" @click='goNews(2)'>
           <img src='../../assets/discover2.jpg' />
           <div>
@@ -20,6 +23,8 @@
             <span>XCarnival interview: the world needs better synthetic assets </span>
           </div>
         </div>
+      </swiperSlide>
+      <swiperSlide>
         <div class="swiper_banner_list" @click='goNews(3)'>
           <img src='../../assets/discover3.jpg' />
           <div>
@@ -27,16 +32,17 @@
             <span>XCarnival Secures $2 Million Seed Investment</span>
           </div>
         </div>
-        <div class="swiper_banner_list" @click='goNews(4)'>
+      </swiperSlide>
+      <swiperSlide>
+        <div class="swiper_banner_list" @click='goNews(3)'>
           <img src='../../assets/discover4.jpg' />
           <div>
             <span>Jun 09, 2021</span>
             <span>XCarnival wins BSC Hackthon</span>
           </div>
         </div>
-        
-      </div>
-    </div>
+      </swiperSlide>
+    </swiper>
   </div>
 </template>
 
@@ -45,11 +51,22 @@
 
 <script>
 
-// import { Swiper } from 'swiper';
-// import 'swiper/css';
-
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 export default {
-  name: 'aboutUs',
+  name: 'discover',
+  components:{
+    swiper, swiperSlide
+  },
+  data(){
+    return {
+      swiperOptions: {
+        notNextTick: true,
+        loop:true,
+        speed: 1500,
+        autoplay:true,
+      },
+    }
+  },
   props: {
     
   },
@@ -71,34 +88,62 @@ export default {
         default:
           break;
       }
-      
+    },
+    next(){
+      this.swiper.slideNext()
+    },
+    prev(){
+      this.swiper.slidePrev()
+    },
+    swiperMove(){
+
+    },
+    swiperEnd(){
+
     }
   },
-  components:{
-    // Swiper
-  }
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.swiper
+    }
+  },
+  mounted() {
+    console.log(this.swiper)
+  },
+  
 }
 </script>
 
 <style scoped>
-  @media (max-width: 1200px){
-    .aboutUs{
-      width:840px;
-      height:420px;
-      position:relative;
-      left:50%;
-      margin-left:-420px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-210px;
-    }
-    
-    .swiper_list4{
-      position:absolute;
+    .discover{
       width:100%;
+      position:absolute;
       left:0;
-      top:0;
+      top:0.66rem;
       bottom:0;
+      overflow-x:hidden;
+      overflow-y:scroll;
+    }
+    .discover>h1{
+      width:calc(100% - 0.32rem);
+      margin-left:0.16rem;
+      font-size:0.36rem;
+      line-height:0.4rem;
+      font-weight:bold;
+      text-align:left;
+      font-family:'Georgia';
+      margin-top:0.2rem;
+    }
+    .discover>p{
+      color:#D6D6D6;
+      font-size:0.16rem;
+      margin: 0 0 0 0.16rem;
+    }
+    .discover>b{
+      margin: 0.1rem 0;
+      border-bottom:0.03rem solid black;
+      display:block;
+      width: 2.2rem;
     }
     .swiper_list4>h1{
       font-size:48px;
@@ -118,380 +163,86 @@ export default {
       font-family:'DMSans-Medium'
     }
     .swiper_banner{
-      margin-top:14px;
-      height:210px;
+      margin-top:0.3rem;
+      height:5rem;
       width:100%;
       display:flex;
-    }
-    .ic_prev{
-      position:absolute;
-      left:11px;
-      top:50%;
-      width: 20px;
-      height:35px;
-      margin-top:-10px; 
-    }
-    .ic_next{
-      position:absolute;
-      right:11px;
-      top:50%;
-      width: 20px;
-      height:35px;
-      margin-top:-10px; 
-    }
-    .swiper_banner_list{
-      width:182px;
-      display:inline-block;
-      margin-left:14px;
-      height:100%;
-      position:relative;
-    }
-    .swiper_banner_list>img{
-      height:100%;
-      width:100%;
-      object-fit:cover;
-    }
-    .swiper_banner_list>div{
-      position:absolute;
-      width:100%;
-      height:39px;
-      bottom:0;
-      background:rgba(0, 0, 0, 0.8);
-      float:left;
-      padding:7px;
-      box-sizing:border-box;
-    }
-    .swiper_banner_list>div>span:nth-child(1){
-      font-size: 10px;
-      color:white;
-      width:40%;
-      line-height:10px;
-      height:100%;
-      display:inline-block;
-      box-sizing:border-box;
-      float:left;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_banner_list>div>span:nth-child(2){
-      font-size: 8px;
-      line-height:8px;
-      width:60%;
-      color:white;
-      height:100%;
-      display:inline-block;
-      box-sizing:border-box;
-      float:left;
-      
-    }
-  }
-  @media screen and (min-width: 1200px) and (max-width: 1680px){
-    .aboutUs{
-      width:1200px;
-      height:600px;
-      position:relative;
-      left:50%;
-      margin-left:-600px;
+      width:calc(100% - 0.32rem);
+      margin-left:0.16rem;
       overflow:hidden;
-      top:50%;
-      margin-top:-300px;
     }
     
-    .swiper_list4{
-      position:absolute;
-      width:100%;
-      left:0;
-      top:0;
-      bottom:0;
-    }
-    .swiper_list4>h1{
-      font-size:68px;
-      width:100%;
-      line-height:80px;
-      text-align:center;
-      margin: 30px 0 0 0 ;
-      font-weight:bold;
-      font-family:'Georgia'
-    }
-    .swiper_list4>p{
-      font-size:16px;
-      width:100%;
-      text-align:center;
-      margin:0;
-      font-weight: bold;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_banner{
-      margin-top:20px;
-      height:300px;
-      width:100%;
-      display:flex;
-    }
-    .ic_prev{
-      position:absolute;
-      left:16px;
-      top:50%;
-      width: 28px;
-      height:50px;
-      margin-top:-14px; 
-    }
-    .ic_next{
-      position:absolute;
-      right:16px;
-      top:50%;
-      width: 28px;
-      height:50px;
-      margin-top:-14px; 
-    }
     .swiper_banner_list{
-      width:260px;
+      width:100%;
       display:inline-block;
-      margin-left:20px;
       height:100%;
       position:relative;
     }
     .swiper_banner_list>img{
-      height:100%;
       width:100%;
+      height:100%;
       object-fit:cover;
     }
     .swiper_banner_list>div{
       position:absolute;
       width:100%;
-      height:56px;
+      height:0.72rem;
       bottom:0;
       background:rgba(0, 0, 0, 0.8);
       float:left;
-      padding:10px;
+      padding:0.07rem;
       box-sizing:border-box;
     }
     .swiper_banner_list>div>span:nth-child(1){
-      font-size: 14px;
+      font-size: 0.18rem;
       color:white;
       width:40%;
-      line-height:14px;
+      line-height:0.5rem;
       height:100%;
       display:inline-block;
       box-sizing:border-box;
       float:left;
-      font-family:'DMSans-Medium'
+      font-family:'DMSans-Medium';
+      font-weight:bold;
     }
     .swiper_banner_list>div>span:nth-child(2){
-      font-size: 12px;
-      line-height:12px;
+      font-size: 0.14rem;
+      line-height:0.3rem;
       width:60%;
       color:white;
+      font-family:'DMSans-Medium';
       height:100%;
       display:inline-block;
       box-sizing:border-box;
       float:left;
-      
     }
-  }
-  @media screen and (min-width: 1680px) and (max-width: 1960px){
-    .aboutUs{
-      width:1680px;
-      height:840px;
-      position:relative;
-      left:50%;
-      margin-left:-840px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-420px;
+    .swiper-button{
+      color:white;
+      border:none;
+      background:none;
     }
-    
-    .swiper_list4{
+    .swiper-button:active{
+      border:none;
+      background:none;
+    }
+    .ic_swiper_button{
       position:absolute;
-      width:100%;
-      left:0;
-      top:0;
-      bottom:0;
-    }
-    .swiper_list4>h1{
-      font-size:95px;
-      width:100%;
-      line-height:112px;
+      width: 0.6rem;
+      height:0.6rem;
+      z-index:2;
+      top:50%;
+      line-height:0.6rem;
       text-align:center;
-      margin: 42px 0 0 0 ;
-      font-weight:bold;
-      font-family:'Georgia'
     }
-    .swiper_list4>p{
-      font-size:22px;
-      width:100%;
-      text-align:center;
-      margin:0;
-      font-weight: bold;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_banner{
-      margin-top:28px;
-      height:420px;
-      width:100%;
-      display:flex;
+    .ic_swiper_button>img{
+      width:0.12rem;
+      height:0.2rem;
+      z-index:2;
     }
     .ic_prev{
-      position:absolute;
-      left:22px;
-      top:50%;
-      width: 39px;
-      height:70px;
-      margin-top:-20px; 
-    }
-    .ic_next{
-      position:absolute;
-      right:22px;
-      top:50%;
-      width: 39px;
-      height:70px;
-      margin-top:-20px; 
-    }
-    .swiper_banner_list{
-      width:364px;
-      display:inline-block;
-      margin-left:28px;
-      height:100%;
-      position:relative;
-    }
-    .swiper_banner_list>img{
-      height:100%;
-      width:100%;
-      object-fit:cover;
-    }
-    .swiper_banner_list>div{
-      position:absolute;
-      width:100%;
-      height:78px;
-      bottom:0;
-      background:rgba(0, 0, 0, 0.8);
-      float:left;
-      padding:14px;
-      box-sizing:border-box;
-    }
-    .swiper_banner_list>div>span:nth-child(1){
-      font-size: 20px;
-      color:white;
-      width:40%;
-      line-height:20px;
-      height:100%;
-      display:inline-block;
-      box-sizing:border-box;
-      float:left;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_banner_list>div>span:nth-child(2){
-      font-size: 17px;
-      line-height:17px;
-      width:60%;
-      color:white;
-      height:100%;
-      display:inline-block;
-      box-sizing:border-box;
-      float:left;
-      
-    }
-  }
-  @media (min-width: 1960px){
-    .aboutUs{
-      width:1920px;
-      height:960px;
-      position:relative;
-      left:50%;
-      margin-left:-960px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-480px;
-    }
-    
-    .swiper_list4{
-      position:absolute;
-      width:100%;
       left:0;
-      top:0;
-      bottom:0;
-    }
-    .swiper_list4>h1{
-      font-size:109px;
-      width:100%;
-      line-height:128px;
-      text-align:center;
-      margin: 48px 0 0 0 ;
-      font-weight:bold;
-      font-family:'Georgia'
-    }
-    .swiper_list4>p{
-      font-size:26px;
-      width:100%;
-      text-align:center;
-      margin:0;
-      font-weight: bold;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_banner{
-      margin-top:32px;
-      height:480px;
-      width:100%;
-      display:flex;
-    }
-    .ic_prev{
-      position:absolute;
-      left:26px;
-      top:50%;
-      width: 45px;
-      height:80px;
-      margin-top:-22px; 
     }
     .ic_next{
-      position:absolute;
-      right:26px;
-      top:50%;
-      width: 45px;
-      height:80px;
-      margin-top:-22px; 
+      right:0;
     }
-    .swiper_banner_list{
-      width:416px;
-      display:inline-block;
-      margin-left:32px;
-      height:100%;
-      position:relative;
-    }
-    .swiper_banner_list>img{
-      height:100%;
-      width:100%;
-      object-fit:cover;
-    }
-    .swiper_banner_list>div{
-      position:absolute;
-      width:100%;
-      height:90px;
-      bottom:0;
-      background:rgba(0, 0, 0, 0.8);
-      float:left;
-      padding:16px;
-      box-sizing:border-box;
-    }
-    .swiper_banner_list>div>span:nth-child(1){
-      font-size: 22px;
-      color:white;
-      width:40%;
-      line-height:22px;
-      height:100%;
-      display:inline-block;
-      box-sizing:border-box;
-      float:left;
-      font-family:'DMSans-Medium'
-    }
-    .swiper_banner_list>div>span:nth-child(2){
-      font-size: 19px;
-      line-height:19px;
-      width:60%;
-      color:white;
-      height:100%;
-      display:inline-block;
-      box-sizing:border-box;
-      float:left;
-      
-    }
-  }
-  
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div class='solution'>
     <img src='../../assets/ic_down.svg' class="ic_down" :class="activeClass?'ic_active':'ic_hide'" @click='nextSwiper'>
-    <swiper ref="mySwiper" :options="swiperOptions" class='swiper-grid swiper_box swiper-no-swiping' >
+    <img src='../../assets/ic_down.svg' class="ic_up" :class="activeClass?'ic_active':'ic_hide'" @click='prevSwiper'>
+    <swiper ref="mySwiper" :options="swiperOptions" class='swiper-grid swiper_box ' >
+    <!-- swiper-no-swiping -->
       <swiperSlide class='swiperSlide'>
         <div class='swiper_list'>
           <div class='swiper_list_line'>
@@ -112,7 +114,10 @@ export default {
   methods: {
     nextSwiper(){
       this.swiper.slideNext()
-    }
+    },
+    prevSwiper(){
+      this.swiper.slidePrev()
+    },
   },
   computed: {
     swiper() {
@@ -127,10 +132,11 @@ export default {
 }
 </script>
 
-<style scoped>
-  .ic_down{
+<!-- .ic_down{
     animation: icDownTranslate 2s infinite;
-  }
+  } -->
+<style scoped>
+  
   @keyframes icDownTranslate {
     0% {
         transform: translate(0px, 0px);
@@ -251,6 +257,16 @@ export default {
       bottom:24px;
       z-index:3;
     }
+    .ic_up{
+      position:fixed;
+      width:60px;
+      height:60px;
+      left:24px;
+      bottom:100px;
+      z-index:3;
+      transform: rotate(180deg);
+    }
+    
     .advisors_list{
       width: calc(100% - 112px);
       margin-left: 40px;
@@ -452,6 +468,16 @@ export default {
       bottom:30px;
       z-index:3;
     }
+    .ic_up{
+      position:fixed;
+      width:60px;
+      height:60px;
+      left:30px;
+      bottom:130px;
+      z-index:3;
+      transform: rotate(180deg);
+    }
+    
     .advisors_list{
       width: calc(100% - 140px);
       margin-left: 50px;
@@ -653,6 +679,16 @@ export default {
       bottom:42px;
       z-index:3;
     }
+    .ic_up{
+      position:fixed;
+      width:60px;
+      height:60px;
+      left:42px;
+      bottom:100px;
+      z-index:3;
+      transform: rotate(180deg);
+    }
+    
     .advisors_list{
       width: calc(100% - 196px);
       margin-left: 70px;
@@ -854,6 +890,16 @@ export default {
       bottom:48px;
       z-index:3;
     }
+    .ic_up{
+      position:fixed;
+      width:60px;
+      height:60px;
+      left:48px;
+      bottom:118px;
+      z-index:3;
+      transform: rotate(180deg);
+    }
+    
     .advisors_list{
       width: calc(100% - 223px);
       margin-left: 80px;

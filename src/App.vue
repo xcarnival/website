@@ -21,6 +21,9 @@ export default {
     HomeMobile
   },
   mounted() {
+    window.onresize = () => {
+      console.log(window.screenWidth)
+    }
     let sUserAgent = navigator.userAgent.toLowerCase();
     let bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
     let bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
@@ -31,9 +34,11 @@ export default {
     let bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
     let bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-      this.browserRedirect='mobile'
+      this.browserRedirect='mobile';
+      console.log('mobile')
     } else{
-      this.browserRedirect='pc'
+      this.browserRedirect='pc';
+      console.log('pc')
     }
     
   },

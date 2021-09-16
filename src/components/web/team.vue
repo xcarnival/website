@@ -17,8 +17,7 @@
               <p>Early Blockchain investor and senior DeFi expert</p>
               <p>COO of Australia's largest cross- border payment finance company</p>
               <p>Founder of Australia’s first fully compliant blockchain fund</p>
-              <p>Founder of the largest BSC Chinese community
-              <br/>-BroLeon - with 20K active members</p>
+              
             </div>
             <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
           </div>

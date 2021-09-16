@@ -1,7 +1,9 @@
 <template>
   <div class='aboutUs'>
+    <img src='../../assets/ic_down.svg' class="ic_up" :class="activeClass?'ic_active':'ic_hide'" @click='prevSwiper'>
     <img src='../../assets/ic_down.svg' class="ic_down" :class="activeClass?'ic_active':'ic_hide'" @click='nextSwiper'>
-    <swiper ref="mySwiper" :options="swiperOptions" class='swiper-grid swiper_box swiper-no-swiping' >
+    <swiper ref="mySwiper" :options="swiperOptions" class='swiper-grid swiper_box ' >
+    <!-- swiper-no-swiping -->
       <swiperSlide class='swiperSlide'>
         <div class='swiper_list'>
           <div class='swiper_list_introduce'>
@@ -131,6 +133,9 @@ export default {
   methods: {
     nextSwiper(){
       this.swiper.slideNext()
+    },
+    prevSwiper(){
+      this.swiper.slidePrev()
     }
   },
   computed: {
@@ -146,10 +151,11 @@ export default {
 }
 </script>
 
-<style scoped>
-  .ic_down{
+<!-- .ic_down{
     animation: icDownTranslate 2s infinite;
-  }
+  } -->
+<style scoped>
+  
   @keyframes icDownTranslate {
     0% {
         transform: translate(0px, 0px);
@@ -265,6 +271,15 @@ export default {
       left:30px;
       bottom:30px;
       z-index:3;
+    }
+    .ic_up{
+      position:fixed;
+      width:60px;
+      height:60px;
+      bottom:100px;
+      left:30px;
+      z-index:3;
+      transform: rotate(180deg);
     }
     
     .swiper_list3>h1{
@@ -481,6 +496,15 @@ export default {
       bottom:42px;
       z-index:3;
     }
+    .ic_up{
+      position:fixed;
+      width:60px;
+      height:60px;
+      left:42px;
+      top:100px;
+      z-index:3;
+      transform: rotate(180deg);
+    }
     
     .swiper_list3>h1{
       font-size:95px;
@@ -696,6 +720,15 @@ export default {
       left:48px;
       bottom:48px;
       z-index:3;
+    }
+    .ic_up{
+      position:fixed;
+      width:96px;
+      height:96px;
+      left:48px;
+      top:120px;
+      z-index:3;
+      transform: rotate(180deg);
     }
     
     .swiper_list3>h1{

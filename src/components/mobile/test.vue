@@ -1,124 +1,48 @@
 <template>
-  <div class='advisors'>
-    <div class='advisors_list'>
-      <div>
-        <div @click='teamClick(1)'>
-          <img src='../../assets/team/team_member_leon.png' />
-          <b>Leon LIU</b>
-          <span>CEO</span>
-          <div class='team_introduce' :class="teamIndex == 1 ? 'team_introduceActive' : 'team_introduceHide'" >
-            <div>
-              <img src='../../assets/team/team_member_leon.png' />
-              <b>Leon LIU</b>
-              <span>CEO</span>
-            </div>
-            <div>
-              <p>Serial entrepreneur in Australia, Hong Kong, Mainland China, and Japan</p>
-              <p>Early Blockchain investor and senior DeFi expert</p>
-              <p>COO of Australia's largest cross- border payment finance company</p>
-              <p>Founder of Australia’s first fully compliant blockchain fund</p>
-              <p>Founder of the largest BSC Chinese community
-              <br/>-BroLeon - with 20K active members</p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
+  <div class='discover'>
+    <h1>Discover</h1>
+    <p>News</p>
+    <b></b>
+    <div class='ic_swiper_button ic_prev'><img src="../../assets/ic_prev.png" @click="prev" /></div>
+    <div class='ic_swiper_button ic_next'><img src="../../assets/ic_next.png" @click="next" /></div>
+    <swiper ref="mySwiper" :options="swiperOptions" class='swiper_banner swiper_box swiper-no-swiping' >
+      <swiperSlide>
+        <div class="swiper_banner_list" @click='goNews(2)'>
+          <img src='../../assets/discover1.jpg' />
+          <div>
+            <span>Jun 28, 2021</span>
+            <span>XCarnivfoutal lists on CMC, celebrating with airdrops</span>
           </div>
         </div>
-        <div @click='teamClick(2)'>
-          <img src='../../assets/team/team_member_vivi.png' />
-          <b>Vivi LIN</b>
-          <span>CMO</span>
-          <div class='team_introduce' :class="teamIndex == 2 ? 'team_introduceActive' : 'team_introduceHide'">
-            <div>
-              <img src='../../assets/team/team_member_vivi.png' />
-              <b>Vivi LIN</b>
-              <span>CMO</span>
-            </div>
-            <div>
-              <p>Global media personality, crypto influencer and marketing expert. </p>
-              <p>Well-known Innovation advisor between Silicon Valley and China.</p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
+      </swiperSlide>
+      <swiperSlide>
+        <div class="swiper_banner_list" @click='goNews(2)'>
+          <img src='../../assets/discover2.jpg' />
+          <div>
+            <span>Jun 17, 2021</span>
+            <span>XCarnival interview: the world needs better synthetic assets </span>
           </div>
         </div>
-
-        <div @click='teamClick(3)'>
-          <img src='../../assets/team/team_member_scott.png' />
-          <b>Scott HAN</b>
-          <span>Financial Director</span>
-          <div class='team_introduce ' :class="teamIndex == 3 ? 'team_introduceActive' : 'team_introduceHide'">
-            <div>
-              <img src='../../assets/team/team_member_scott.png' />
-              <b>Scott HAN</b>
-              <span>Financial Director</span>
-            </div>
-            <div>
-             <p>Business analyst in Macquarie Investment Bank and Federal Bank. </p>
-              <p>Senior structure builder of global OTC derivatives transaction models and risk control system.</p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
+      </swiperSlide>
+      <swiperSlide>
+        <div class="swiper_banner_list" @click='goNews(3)'>
+          <img src='../../assets/discover3.jpg' />
+          <div>
+            <span>Jun 10, 2021</span>
+            <span>XCarnival Secures $2 Million Seed Investment</span>
           </div>
         </div>
-      </div>
-
-      <div>
-        <div @click='teamClick(4)'>
-          <img src='../../assets/team/team_member_alan.png' />
-          <b>Alan MA</b>
-          <span>CTO</span>
-          <div class='team_introduce' :class="teamIndex == 4 ? 'team_introduceActive' : 'team_introduceHide'">
-            <div>
-              <img src='../../assets/team/team_member_alan.png' />
-              <b>Alan MA</b>
-              <span>CTO</span>
-            </div>
-            <div>
-            <p>Former CTO of Kcash, with 10 years of technology research and development experience in blockchain industry.</p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
-          </div>
-          
-        </div>
-
-
-        <div @click='teamClick(5)'>
-          <img src='../../assets/team/team_advisor_eric.png' />
-          <b>Eric ZHENG</b>
-          <span>Professor</span>
-          <div class='team_introduce' :class="teamIndex == 5 ? 'team_introduceActive' : 'team_introduceHide'">
-            <div>
-              <img src='../../assets/team/team_advisor_eric.png' />
-              <b>Eric ZHENG</b>
-              <span>Professor</span>
-            </div>
-            <div>
-              <p>Professor of information system. </p>
-              <p>PhD,University of Pennsylvania. </p>
-              <p>Devoted to information technology innovation research in data mining and social media analytics. </p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
-          </div>
-          
-        </div>
-        <div @click='teamClick(6)'>
-          <img src='../../assets/team/team_advisor_gieno.png' />
-          <b>Gieno MIAO</b>
-          <span>Chief Scientist</span>
-          <div class='team_introduce' :class="teamIndex == 6 ? 'team_introduceActive' : 'team_introduceHide'">
-            <div>
-              <img src='../../assets/team/team_advisor_gieno.png' />
-              <b>Gieno MIAO</b>
-              <span>Chief Scientist</span>
-            </div>
-            <div>
-              <p>Founder of Quantiex and chief crypto advisor for Asia Digital Bank.  </p>
-              <p>Formerly, CTO of JMU and CTO of Heima. </p>
-              <p>Senior Director of Amazon, Alibaba and Microsoft, Thomson Reuters.</p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
+      </swiperSlide>
+      <swiperSlide>
+        <div class="swiper_banner_list" @click='goNews(3)'>
+          <img src='../../assets/discover4.jpg' />
+          <div>
+            <span>Jun 09, 2021</span>
+            <span>XCarnival wins BSC Hackthon</span>
           </div>
         </div>
-      </div>
-    </div>
+      </swiperSlide>
+    </swiper>
   </div>
 </template>
 
@@ -126,168 +50,210 @@
 @import  "../../assets/DMSans-Medium.ttf";
 
 <script>
+
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 export default {
-  name: 'aboutUs',
+  name: 'discover',
   data(){
-    return{
-      teamIndex:0
+    return {
+      swiperOptions: {
+        notNextTick: true,
+        loop:true,
+        speed: 1000,
+        lazyLoading:true,
+        autoplay:true,
+        direction: 'horizontal',
+        grabCursor : true,
+        on:{
+         
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }
+      }
     }
   },
   props: {
     
   },
   methods: {
-    teamClick(i){
-      this.teamIndex = i;
+    goNews(i){
+      switch (i) {
+        case 1:
+          window.open ('https://www.cryptodaily.co.uk/2021/06/xcarnival-celebrates-listing')
+          break;
+        case 2:
+          window.open ("https://hackernoon.com/the-world-needs-better-synthetic-assets-unhashed-9-n93732sr")
+          break;
+        case 3:
+          window.open ("https://news.bitcoin.com/xcarnival-secures-2-million-seed-investment/")
+          break;
+        case 4:
+          window.open ("https://www.yahoo.com/news/xcarnival-wins-bsc-hackathon-four-041400960.html?guccounter=2")
+          break;
+        default:
+          break;
+      }
     },
-    closeIntroduce(){
-      this.teamIndex = 'false';
+    next(){
+      this.swiper.slideNext()
+    },
+    prev(){
+      this.swiper.slidePrev()
+    },
+    swiperMove(){
+
+    },
+    swiperEnd(){
+
     }
   },
-  components:{
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.swiper
+    }
+  },
+  mounted() {
     
+    console.log(this.swiper)
+    
+  },
+  components:{
+    swiper, swiperSlide
   }
 }
 </script>
 
 <style scoped>
-  .advisors{
-    width:100%;
-    margin:0;
-    padding:0;
-    float:left;
-  }
-  .advisors_list{
-    width: 80rem;
-    top:12rem;
-    margin: 0 auto;
-    overflow:hidden;
-  }
-  .advisors_list>div{
-    position:relative;
-    left:0;
-    top:0;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-between;
-    height:25rem;
-  }
-  .advisors_list>div>div{
-    width: 20rem;
-    margin-top: 3rem;
-    margin-right:5rem;
-    text-align:center;
-  }
-  .advisors_list>div>div:hover b{
-    color:#FE4905;
-  }
-  .advisors_list>div>div:hover span{
-    color:#FE4905;
-  }
-  .advisors_list>div>div>img{
-    width:14rem;
-    height:14rem;
-    border-radius: 7rem;
-    object-fit:cover;
-    margin:0 auto;
-  }
-  
-  .advisors_list>div>div>b{
-    font-family: 'Georgia';
-    font-size: 3rem;
-    width:100%;
-    text-align:center;
-    float:left;
-    margin:0;
-    line-height:6rem;
-  }
-  .advisors_list>div>div>span{
-    font-family: 'DMSans-Medium';
-    font-size: 2.2rem;
-    width:100%;
-    display:block;
-    text-align:center;
-  }
-  .team_introduce{
-    position:absolute;
-    left:-100%;
-    top:0;
-    bottom:0;
-    background:white;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-  }
-  .team_introduce>div:nth-child(1){
-    width:20rem;
-    height:100%;
-    display:inline-block;
-    text-align:center;
-    float:left;
-  }
-  .team_introduce>div:nth-child(2){
-    width:calc(100% - 20rem);
-    display:inline-block;
-    height:100%;
-    float:left;
-    background:#F2F2F3;
-    padding: 0 2rem;
-    text-align:left;
-    font-size:1.6rem;
-    box-sizing:border-box;
-  }
-  .team_introduce>div>img{
-    width:14rem;
-    height:14rem;
-    border-radius: 7rem;
-    object-fit:cover;
-    margin-top:3rem;
-  }
-  
-  .team_introduce>div>b{
-    font-family: 'Georgia';
-    font-size: 3rem;
-    width:100%;
-    text-align:center;
-    float:left;
-    margin:0;
-    line-height:6rem;
-  }
-  .team_introduce>div>span{
-    font-family: 'DMSans-Medium';
-    font-size: 2.2rem;
-    width:100%;
-    display:block;
-    text-align:center;
-  }
-  .team_introduce>div>p{
-    margin-top:2.2rem;
-    line-height:2rem;
-    font-family: 'Georgia';
-  }
-  .team_introduce>span{
-    position:absolute;
-    display:block;
-    right:0;
-    bottom:0;
-    width:2rem;
-    height:2rem;
-    text-align:center;
-    line-height:1.8rem;
-    color:white;
-    background:#FE4905;
-    z-index:2
-  }
-  .team_introduce>span>img{
-    width:60%;
-  }
-  .team_introduceActive{
-    left:0;
-    transition: left 1s;
-  }
-  .team_introduceHide{
-    left:-100%;
+    .discover{
+      width:100%;
+      position:absolute;
+      left:0;
+      top:0.66rem;
+      bottom:0;
+      overflow-x:hidden;
+      overflow-y:scroll;
+    }
+    .discover>h1{
+      width:calc(100% - 0.32rem);
+      margin-left:0.16rem;
+      font-size:0.36rem;
+      line-height:0.4rem;
+      font-weight:bold;
+      text-align:left;
+      font-family:'Georgia';
+      margin-top:0.2rem;
+    }
+    .discover>p{
+      color:#D6D6D6;
+      font-size:0.16rem;
+      margin: 0 0 0 0.16rem;
+    }
+    .discover>b{
+      margin: 0.1rem 0;
+      border-bottom:0.03rem solid black;
+      display:block;
+      width: 2.2rem;
+    }
+    .swiper_list4>h1{
+      font-size:48px;
+      width:100%;
+      line-height:56px;
+      text-align:center;
+      margin: 21px 0 0 0 ;
+      font-weight:bold;
+      font-family:'Georgia'
+    }
+    .swiper_list4>p{
+      font-size:11px;
+      width:100%;
+      text-align:center;
+      margin:0;
+      font-weight: bold;
+      font-family:'DMSans-Medium'
+    }
+    .swiper_banner{
+      margin-top:0.3rem;
+      height:5rem;
+      width:100%;
+      display:flex;
+      width:calc(100% - 0.32rem);
+      margin-left:0.16rem;
+      overflow:hidden;
+    }
     
-    transition: left 0.5s;
-  }
+    .swiper_banner_list{
+      width:100%;
+      display:inline-block;
+      height:100%;
+      position:relative;
+    }
+    .swiper_banner_list>img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .swiper_banner_list>div{
+      position:absolute;
+      width:100%;
+      height:0.72rem;
+      bottom:0;
+      background:rgba(0, 0, 0, 0.8);
+      float:left;
+      padding:0.07rem;
+      box-sizing:border-box;
+    }
+    .swiper_banner_list>div>span:nth-child(1){
+      font-size: 0.18rem;
+      color:white;
+      width:40%;
+      line-height:0.5rem;
+      height:100%;
+      display:inline-block;
+      box-sizing:border-box;
+      float:left;
+      font-family:'DMSans-Medium';
+      font-weight:bold;
+    }
+    .swiper_banner_list>div>span:nth-child(2){
+      font-size: 0.14rem;
+      line-height:0.3rem;
+      width:60%;
+      color:white;
+      font-family:'DMSans-Medium';
+      height:100%;
+      display:inline-block;
+      box-sizing:border-box;
+      float:left;
+    }
+    .swiper-button{
+      color:white;
+      border:none;
+      background:none;
+    }
+    .swiper-button:active{
+      border:none;
+      background:none;
+    }
+    .ic_swiper_button{
+      position:absolute;
+      width: 0.6rem;
+      height:0.6rem;
+      z-index:2;
+      top:50%;
+      line-height:0.6rem;
+      text-align:center;
+    }
+    .ic_swiper_button>img{
+      width:0.12rem;
+      height:0.2rem;
+      z-index:2;
+    }
+    .ic_prev{
+      left:0;
+    }
+    .ic_next{
+      right:0;
+    }
 </style>

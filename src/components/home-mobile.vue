@@ -53,7 +53,9 @@ export default {
   },
   methods: {
     tabFun(i){
+      console.log(i)
       this.tabIndex = i;
+      this.menuToggle = true;
     },
     openList(){
       this.menuToggle = !this.menuToggle;
@@ -86,7 +88,7 @@ export default {
     top:0;
     left:0;
     width:100%;
-    height:21rem;
+    height:0.66rem;
 		overflow:hidden;
   }
   .home_header_div{
@@ -94,24 +96,24 @@ export default {
     top:0;
     left:0;
     width: 100%;
-    height: 21rem;
-    background:black;
+    height: 0.66rem;
     border-bottom: 1px solid #EEEEF5;
-    z-index:1;
+    z-index:10;
+    background: black;
   }
   .home_header_div .logo{
-    width: 24rem;
-    height: 6rem;
-    margin-left: 4rem;
-    margin-top: 10rem;
+    width: 1;
+    height: 0.25rem;
+    margin-left: 0.1rem;
+    margin-top: 0.3rem;
     float:left;
   }
   .home_header_div .menu{
     float:right;
-    margin-right:4rem;
-    margin-top:10rem;
-    width:5rem;
-    height:5rem;
+    margin-right:0.1rem;
+    margin-top:0.3rem;
+    width:0.2rem;
+    height:0.2rem;
   }
   .home_header_left{
     display:inline-block;
@@ -129,23 +131,31 @@ export default {
     width:100%;
     height:100%;
     position:fixed;
-    top:21rem;
+    top:0;
     bottom:0;
     left:0;
     background:black;
-    padding-top:24rem;
     box-sizing:border-box;
+    z-index:9;
+    padding-top:0.66rem;
   }
   .home_tab>li{
-    height:29rem;
     width:100%;
     text-align:center;
-    line-height:29rem;
     color: #D6D6D6;
-    font-size:6rem;
+    font-size:0.24rem;
     font-family:'DMSans-Medium';
     font-weight:bold;
+    margin-top:0.6rem;
   }
- 
+  .home_content{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+  }
+  .tabHigh{
+    color: #FE4905 !important;
+  }
     
 </style>

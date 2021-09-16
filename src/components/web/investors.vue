@@ -8,16 +8,26 @@
         <div class='investorsView_box_4'><img src='../../assets/2.png' /></div>
         <div class='investorsView_box_4'><img src='../../assets/3.png' /></div>
         <div class='investorsView_box_4'><img src='../../assets/4.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/5.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/6.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/7.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/8.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/9.png' /></div>
-        <div class='investorsView_box_4'><img src='../../assets/10.png' /></div>
+
         <div class='investorsView_box_4'><img src='../../assets/11.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/14.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/13.png' /></div>
         <div class='investorsView_box_4'><img src='../../assets/12.png' /></div>
-        <div class='investorsView_box_2'><img src='../../assets/13.png' /></div>
-        <div class='investorsView_box_2'><img src='../../assets/14.png' /></div>
+
+        <div class='investorsView_box_4'><img src='../../assets/4sv.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/10.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/9.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/5.png' /></div>
+
+        <div class='investorsView_box_3'><img src='../../assets/bsc.png' /></div>
+        <div class='investorsView_box_3'><img src='../../assets/18.png' /></div>
+        <div class='investorsView_box_3'><img src='../../assets/15.png' /></div>
+
+        <div class='investorsView_box_2'><img src='../../assets/17.png' /></div>
+        <div class='investorsView_box_2'><img src='../../assets/solv.png' /></div>
+        
+        
+        
       </div>
     </div>
   </div>
@@ -40,6 +50,18 @@ export default {
 </script>
 
 <style scoped>
+    .investorsView_box_4{
+      width: calc(calc(100% - 21px)/4);
+    }
+    .investorsView_box_3{
+      width: calc(calc(100% - 14px)/3);
+    }
+    .investorsView_box_2{
+      width: calc(calc(100% - 7px)/2);
+    }
+    .investorsView_box_1{
+      width: 100%;
+    }
   @media (max-width: 1200px){
   .investors{
       width:840px;
@@ -64,7 +86,7 @@ export default {
       width:100%;
       line-height:56px;
       text-align:center;
-      margin: 35px 0 0 0 ;
+      
       font-weight:bold;
       font-family:'Georgia'
     }
@@ -93,12 +115,7 @@ export default {
       border:1px solid black;
       box-sizing:border-box;
     }
-    .investorsView_box_4{
-      width: calc(calc(100% - 21px)/4);
-    }
-    .investorsView_box_2{
-      width: calc(calc(100% - 7px)/2);
-    }
+    
     .investorsView_box>div img{
       height:100%;
       width:100%;
@@ -129,7 +146,7 @@ export default {
       width:100%;
       line-height:80px;
       text-align:center;
-      margin: 50px 0 0 0 ;
+      
       font-weight:bold;
       font-family:'Georgia'
     }
@@ -194,7 +211,7 @@ export default {
       width:100%;
       line-height:112px;
       text-align:center;
-      margin: 70px 0 0 0 ;
+      
       font-weight:bold;
       font-family:'Georgia'
     }
@@ -259,7 +276,7 @@ export default {
       width:100%;
       line-height:128px;
       text-align:center;
-      margin: 80px 0 0 0 ;
+      
       font-weight:bold;
       font-family:'Georgia'
     }

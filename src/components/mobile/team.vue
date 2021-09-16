@@ -1,5 +1,8 @@
 <template>
   <div class='advisors'>
+    <h1>Team</h1>
+    <p>Our most professional team</p>
+    <b></b>
     <div class='advisors_list'>
       <div>
         <div @mouseover='teamClick(1)' @mouseout='closeIntroduce()'>
@@ -7,20 +10,14 @@
           <b>Leon LIU</b>
           <span>CEO</span>
           <div class='team_introduce' :class="teamIndex == 1 ? 'team_introduceActive' : 'team_introduceHide'" >
-            <div>
-              <img src='../../assets/team/team_member_leon.png' />
-              <b>Leon LIU</b>
-              <span>CEO</span>
-            </div>
-            <div>
-              <p>Serial entrepreneur in Australia, Hong Kong, Mainland China, and Japan</p>
-              <p>Early Blockchain investor and senior DeFi expert</p>
-              <p>COO of Australia's largest cross- border payment finance company</p>
-              <p>Founder of Australia’s first fully compliant blockchain fund</p>
-              <p>Founder of the largest BSC Chinese community
-              <br/>-BroLeon - with 20K active members</p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
+            <h1>Leon LIU</h1>
+            <h2>CEO</h2>
+            <b></b>
+            <p>Serial entrepreneur in Australia, Hong Kong, Mainland China, and Japan</p>
+            <p>Early Blockchain investor and senior DeFi expert</p>
+            <p>COO of Australia's largest cross- border payment finance company</p>
+            <p>Founder of Australia’s first fully compliant blockchain fund</p>
+            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close2.png'/></span>
           </div>
         </div>
         <div @mouseover='teamClick(2)' @mouseout='closeIntroduce()'>
@@ -28,16 +25,12 @@
           <b>Vivi LIN</b>
           <span>CMO</span>
           <div class='team_introduce' :class="teamIndex == 2 ? 'team_introduceActive' : 'team_introduceHide'">
-            <div>
-              <img src='../../assets/team/team_member_vivi.png' />
-              <b>Vivi LIN</b>
-              <span>CMO</span>
-            </div>
-            <div>
-              <p>Global media personality, crypto influencer and marketing expert. </p>
-              <p>Well-known Innovation advisor between Silicon Valley and China.</p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
+            <h1>Vivi LIN</h1>
+            <h2>CMO</h2>
+            <b></b>
+            <p>Global media personality, crypto influencer and marketing expert. </p>
+            <p>Well-known Innovation advisor between Silicon Valley and China.</p>
+            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close2.png'/></span>
           </div>
         </div>
 
@@ -46,56 +39,39 @@
           <b>Scott HAN</b>
           <span>Financial Director</span>
           <div class='team_introduce ' :class="teamIndex == 3 ? 'team_introduceActive' : 'team_introduceHide'">
-            <div>
-              <img src='../../assets/team/team_member_scott.png' />
-              <b>Scott HAN</b>
-              <span>Financial Director</span>
-            </div>
-            <div>
-             <p>Business analyst in Macquarie Investment Bank and Federal Bank. </p>
+              <h1>Scott HAN</h1>
+              <h2>Financial Director</h2>
+              <b></b>
+              <p>Business analyst in Macquarie Investment Bank and Federal Bank. </p>
               <p>Senior structure builder of global OTC derivatives transaction models and risk control system.</p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
+              <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close2.png'/></span>
           </div>
         </div>
-      </div>
-
-      <div>
         <div @mouseover='teamClick(4)' @mouseout='closeIntroduce()'>
           <img src='../../assets/team/team_member_alan.png' />
           <b>Alan MA</b>
           <span>CTO</span>
           <div class='team_introduce' :class="teamIndex == 4 ? 'team_introduceActive' : 'team_introduceHide'">
-            <div>
-              <img src='../../assets/team/team_member_alan.png' />
-              <b>Alan MA</b>
-              <span>CTO</span>
-            </div>
-            <div>
+            <h1>Alan MA</h1>
+            <h2>CTO</h2>
+            <b></b>
             <p>Former CTO of Kcash, with 10 years of technology research and development experience in blockchain industry.</p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
+            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close2.png'/></span>
           </div>
-          
         </div>
-
 
         <div @mouseover='teamClick(5)' @mouseout='closeIntroduce()'>
           <img src='../../assets/team/team_advisor_eric.png' />
           <b>Eric ZHENG</b>
           <span>Professor</span>
           <div class='team_introduce' :class="teamIndex == 5 ? 'team_introduceActive' : 'team_introduceHide'">
-            <div>
-              <img src='../../assets/team/team_advisor_eric.png' />
-              <b>Eric ZHENG</b>
-              <span>Professor</span>
-            </div>
-            <div>
-              <p>Professor of information system. </p>
-              <p>PhD,University of Pennsylvania. </p>
-              <p>Devoted to information technology innovation research in data mining and social media analytics. </p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
+            <h1>Eric ZHENG</h1>
+            <h2>Professor</h2>
+            <b></b>
+            <p>Professor of information system. </p>
+            <p>PhD,University of Pennsylvania. </p>
+            <p>Devoted to information technology innovation research in data mining and social media analytics. </p>
+            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close2.png'/></span>
           </div>
           
         </div>
@@ -104,20 +80,17 @@
           <b>Gieno MIAO</b>
           <span>Chief Scientist</span>
           <div class='team_introduce' :class="teamIndex == 6 ? 'team_introduceActive' : 'team_introduceHide'">
-            <div>
-              <img src='../../assets/team/team_advisor_gieno.png' />
-              <b>Gieno MIAO</b>
-              <span>Chief Scientist</span>
-            </div>
-            <div>
-              <p>Founder of Quantiex and chief crypto advisor for Asia Digital Bank.  </p>
-              <p>Formerly, CTO of JMU and CTO of Heima. </p>
-              <p>Senior Director of Amazon, Alibaba and Microsoft, Thomson Reuters.</p>
-            </div>
-            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close.png'/></span>
+            <h1>Gieno MIAO</h1>
+            <h2>Chief Scientist</h2>
+            <b></b>
+            <p>Founder of Quantiex and chief crypto advisor for Asia Digital Bank.  </p>
+            <p>Formerly, CTO of JMU and CTO of Heima. </p>
+            <p>Senior Director of Amazon, Alibaba and Microsoft, Thomson Reuters.</p>
+            <span @click.stop='closeIntroduce()'><img  src='../../assets/ic_close2.png'/></span>
           </div>
-        </div>
+        </div>        
       </div>
+
     </div>
   </div>
 </template>
@@ -151,22 +124,42 @@ export default {
 </script>
 
 <style scoped>
-  @media (max-width: 1200px){
     .advisors{
-      width:960px;
-      height:480px;
-      position:relative;
-      left:50%;
-      margin-left:-480px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-240px;
+      width:100%;
+      position:absolute;
+      left:0;
+      top:0.66rem;
+      bottom:0;
+      overflow-x:hidden;
+      overflow-y:scroll;
+      padding-bottom:2rem;
     }
     .advisors_list{
-      width: 640px;
-      top:96px;
-      margin: 0 auto;
-      overflow:hidden;
+      width: calc(100% - 0.32rem);
+      margin-left:0.16rem;
+      
+      height:100%;
+    }
+    .advisors>h1{
+      width:calc(100% - 0.32rem);
+      margin-left:0.16rem;
+      font-size:0.36rem;
+      line-height:0.4rem;
+      font-weight:bold;
+      text-align:left;
+      font-family:'Georgia';
+      margin-top:0.2rem;
+    }
+    .advisors>p{
+      color:#D6D6D6;
+      font-size:0.16rem;
+      margin: 0 0 0 0.16rem;
+    }
+    .advisors>b{
+      margin: 0.1rem 0;
+      border-bottom:0.03rem solid black;
+      display:block;
+      width: 2.2rem;
     }
     .advisors_list>div{
       position:relative;
@@ -175,561 +168,108 @@ export default {
       display:flex;
       flex-flow:row wrap;
       justify-content:space-between;
-      height:200px;
+      width:100%;
     }
     .advisors_list>div>div{
-      width: 160px;
-      margin-top: 24px;
-      margin-right:40px;
+      width: 1.6rem;
+      margin-top: 0.24rem;
       text-align:center;
     }
-    .advisors_list>div>div:hover b{
-      color:#FE4905;
-    }
-    .advisors_list>div>div:hover span{
-      color:#FE4905;
-    }
+   
     .advisors_list>div>div>img{
-      width:112px;
-      height:112px;
-      border-radius: 56px;
+      width:1.6rem;
+      height:1.6rem;
+      border-radius: 0.8rem;
       object-fit:cover;
       margin:0 auto;
     }
     
     .advisors_list>div>div>b{
       font-family: 'Georgia';
-      font-size: 24px;
+      font-size: 0.18rem;
       width:100%;
       text-align:center;
       float:left;
       margin:0;
-      line-height:48px;
+      line-height:0.4rem;
     }
     .advisors_list>div>div>span{
       font-family: 'DMSans-Medium';
-      font-size: 18px;
+      font-size: 0.18rem;
       width:100%;
       display:block;
       text-align:center;
     }
     .team_introduce{
-      position:absolute;
-      left:-100%;
-      top:0;
+      position:fixed;
+      left:0;
+      top:0.66rem;
       bottom:0;
-      background:white;
+      background:#FE4905;
       width:100%;
       height:100%;
       overflow:hidden;
-    }
-    .team_introduce>div:nth-child(1){
-      width:160px;
-      height:100%;
-      display:inline-block;
-      text-align:center;
-      float:left;
-    }
-    .team_introduce>div:nth-child(2){
-      width:calc(100% - 160px);
-      display:inline-block;
-      height:100%;
-      float:left;
-      background:#F2F2F3;
-      padding: 0 16px;
-      text-align:left;
-      font-size:13px;
-      box-sizing:border-box;
-    }
-    .team_introduce>div>img{
-      width:112px;
-      height:112px;
-      border-radius: 56px;
-      object-fit:cover;
-      margin-top:24px;
+      display:none;
+      opacity:0;
     }
     
-    .team_introduce>div>b{
-      font-family: 'Georgia';
-      font-size: 24px;
-      width:100%;
-      text-align:center;
-      float:left;
-      margin:0;
-      line-height:48px;
-    }
-    .team_introduce>div>span{
-      font-family: 'DMSans-Medium';
-      font-size: 18px;
-      width:100%;
-      display:block;
-      text-align:center;
-    }
-    .team_introduce>div>p{
-      margin-top:18px;
-      line-height:16px;
-      font-family: 'Georgia';
-    }
-    .team_introduce>span{
-      position:absolute;
-      display:block;
-      right:0;
-      bottom:0;
-      width:16px;
-      height:16px;
-      text-align:center;
-      line-height:14px;
-      color:white;
-      background:#FE4905;
-      z-index:2
-    }
-    .team_introduce>span>img{
-      width:60%;
-    }
     .team_introduceActive{
-      left:0;
-      transition: left 1s;
+      opacity: 1;
+      transition: opacity 1s;
+      display:block;
     }
     .team_introduceHide{
-      left:-100%;
-      
-      transition: left 0.5s;
+      opacity: 0;
+      display:none;
+      transition: opacity 0.5s;
     }
-  }
-  @media screen and (min-width: 1200px) and (max-width: 1680px){
-    .advisors{
-      width:1200px;
-      height:600px;
-      position:relative;
+    
+    .team_introduce>h1{
+      width:calc(100% - 0.32rem);
+      margin-left:0.16rem;
+      font-size:0.36rem;
+      line-height:0.4rem;
+      font-weight:bold;
+      text-align:left;
+      font-family:'Georgia';
+      margin-top:0.2rem;
+      color:white;
+    }
+    .team_introduce>h2{
+      color:white;
+      font-size:0.16rem;
+      margin: 0 0 0 0.16rem;
+      text-align:left;
+      font-weight:bold;
+    }
+    .team_introduce>b{
+      margin: 0.1rem 0;
+      border-bottom:0.03rem solid white;
+      display:block;
+      width: 2.2rem;
+    }
+    .team_introduce>p{
+      font-size:0.14rem;
+      color:white;
+      margin-top:0.2rem;
+      text-align:left;
+      width:calc(100% - 0.32rem);
+      margin-left:0.16rem;
+      font-family:'DMSans-Medium';
+    }
+    .team_introduce>span img{
+      position:fixed;
+      width:0.35rem;
+      height:0.35rem;
+      border-radius:0.175rem;
+      position:absolute;
       left:50%;
-      margin-left:-600px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-300px;
-    }
-    .advisors_list{
-      width: 800px;
-      top:120px;
-      margin: 0 auto;
-      overflow:hidden;
-    }
-    .advisors_list>div{
-      position:relative;
-      left:0;
-      top:0;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-      height:250px;
-    }
-    .advisors_list>div>div{
-      width: 200px;
-      margin-top: 30px;
-      margin-right:50px;
-      text-align:center;
-    }
-    .advisors_list>div>div:hover b{
-      color:#FE4905;
-    }
-    .advisors_list>div>div:hover span{
-      color:#FE4905;
-    }
-    .advisors_list>div>div>img{
-      width:140px;
-      height:140px;
-      border-radius: 70px;
-      object-fit:cover;
-      margin:0 auto;
+      margin-left:-0.175rem;
+      bottom:1rem;
     }
     
-    .advisors_list>div>div>b{
-      font-family: 'Georgia';
-      font-size: 30px;
-      width:100%;
-      text-align:center;
-      float:left;
-      margin:0;
-      line-height:60px;
-    }
-    .advisors_list>div>div>span{
-      font-family: 'DMSans-Medium';
-      font-size: 22px;
-      width:100%;
-      display:block;
-      text-align:center;
-    }
-    .team_introduce{
-      position:absolute;
-      left:-100%;
-      top:0;
-      bottom:0;
-      background:white;
-      width:100%;
-      height:100%;
-      overflow:hidden;
-    }
-    .team_introduce>div:nth-child(1){
-      width:200px;
-      height:100%;
-      display:inline-block;
-      text-align:center;
-      float:left;
-    }
-    .team_introduce>div:nth-child(2){
-      width:calc(100% - 200px);
-      display:inline-block;
-      height:100%;
-      float:left;
-      background:#F2F2F3;
-      padding: 0 20px;
-      text-align:left;
-      font-size:16px;
-      box-sizing:border-box;
-    }
-    .team_introduce>div>img{
-      width:140px;
-      height:140px;
-      border-radius: 70px;
-      object-fit:cover;
-      margin-top:30px;
-    }
-    
-    .team_introduce>div>b{
-      font-family: 'Georgia';
-      font-size: 30px;
-      width:100%;
-      text-align:center;
-      float:left;
-      margin:0;
-      line-height:60px;
-    }
-    .team_introduce>div>span{
-      font-family: 'DMSans-Medium';
-      font-size: 22px;
-      width:100%;
-      display:block;
-      text-align:center;
-    }
-    .team_introduce>div>p{
-      margin-top:22px;
-      line-height:20px;
-      font-family: 'Georgia';
-    }
-    .team_introduce>span{
-      position:absolute;
-      display:block;
-      right:0;
-      bottom:0;
-      width:20px;
-      height:20px;
-      text-align:center;
-      line-height:18px;
-      color:white;
-      background:#FE4905;
-      z-index:2
-    }
-    .team_introduce>span>img{
-      width:60%;
-    }
-    .team_introduceActive{
-      left:0;
-      transition: left 1s;
-    }
-    .team_introduceHide{
-      left:-100%;
-      
-      transition: left 0.5s;
-    }
-  }
-  @media screen and (min-width: 1680px) and (max-width: 1960px){
-    .advisors{
-      width:1680px;
-      height:840px;
-      position:relative;
-      left:50%;
-      margin-left:-840px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-420px;
-    }
-    .advisors_list{
-      width: 1120px;
-      top:168px;
-      margin: 0 auto;
-      overflow:hidden;
-    }
-    .advisors_list>div{
-      position:relative;
-      left:0;
-      top:0;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-      height:350px;
-    }
-    .advisors_list>div>div{
-      width: 280px;
-      margin-top: 42px;
-      margin-right:70px;
-      text-align:center;
-    }
-    .advisors_list>div>div:hover b{
-      color:#FE4905;
-    }
-    .advisors_list>div>div:hover span{
-      color:#FE4905;
-    }
-    .advisors_list>div>div>img{
-      width:196px;
-      height:196px;
-      border-radius: 98px;
-      object-fit:cover;
-      margin:0 auto;
-    }
-    
-    .advisors_list>div>div>b{
-      font-family: 'Georgia';
-      font-size: 42px;
-      width:100%;
-      text-align:center;
-      float:left;
-      margin:0;
-      line-height:84px;
-    }
-    .advisors_list>div>div>span{
-      font-family: 'DMSans-Medium';
-      font-size: 31px;
-      width:100%;
-      display:block;
-      text-align:center;
-    }
-    .team_introduce{
-      position:absolute;
-      left:-100%;
-      top:0;
-      bottom:0;
-      background:white;
-      width:100%;
-      height:100%;
-      overflow:hidden;
-    }
-    .team_introduce>div:nth-child(1){
-      width:280px;
-      height:100%;
-      display:inline-block;
-      text-align:center;
-      float:left;
-    }
-    .team_introduce>div:nth-child(2){
-      width:calc(100% - 280px);
-      display:inline-block;
-      height:100%;
-      float:left;
-      background:#F2F2F3;
-      padding: 0 28px;
-      text-align:left;
-      font-size:22px;
-      box-sizing:border-box;
-    }
-    .team_introduce>div>img{
-      width:196px;
-      height:196px;
-      border-radius: 98px;
-      object-fit:cover;
-      margin-top:42px;
-    }
-    
-    .team_introduce>div>b{
-      font-family: 'Georgia';
-      font-size: 42px;
-      width:100%;
-      text-align:center;
-      float:left;
-      margin:0;
-      line-height:84px;
-    }
-    .team_introduce>div>span{
-      font-family: 'DMSans-Medium';
-      font-size: 31px;
-      width:100%;
-      display:block;
-      text-align:center;
-    }
-    .team_introduce>div>p{
-      margin-top:31px;
-      line-height:28px;
-      font-family: 'Georgia';
-    }
-    .team_introduce>span{
-      position:absolute;
-      display:block;
-      right:0;
-      bottom:0;
-      width:28px;
-      height:28px;
-      text-align:center;
-      line-height:25px;
-      color:white;
-      background:#FE4905;
-      z-index:2
-    }
-    .team_introduce>span>img{
-      width:60%;
-    }
-    .team_introduceActive{
-      left:0;
-      transition: left 1s;
-    }
-    .team_introduceHide{
-      left:-100%;
-      
-      transition: left 0.5s;
-    }
-  }
-  @media (min-width: 1960px){
-    .advisors{
-      width:1920px;
-      height:960px;
-      position:relative;
-      left:50%;
-      margin-left:-960px;
-      overflow:hidden;
-      top:50%;
-      margin-top:-480px;
-    }
-    .advisors_list{
-      width: 1280px;
-      top:192px;
-      margin: 0 auto;
-      overflow:hidden;
-    }
-    .advisors_list>div{
-      position:relative;
-      left:0;
-      top:0;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content:space-between;
-      height:400px;
-    }
-    .advisors_list>div>div{
-      width: 320px;
-      margin-top: 48px;
-      margin-right:80px;
-      text-align:center;
-    }
-    .advisors_list>div>div:hover b{
-      color:#FE4905;
-    }
-    .advisors_list>div>div:hover span{
-      color:#FE4905;
-    }
-    .advisors_list>div>div>img{
-      width:224px;
-      height:224px;
-      border-radius: 112px;
-      object-fit:cover;
-      margin:0 auto;
-    }
-    
-    .advisors_list>div>div>b{
-      font-family: 'Georgia';
-      font-size: 48px;
-      width:100%;
-      text-align:center;
-      float:left;
-      margin:0;
-      line-height:96px;
-    }
-    .advisors_list>div>div>span{
-      font-family: 'DMSans-Medium';
-      font-size: 35px;
-      width:100%;
-      display:block;
-      text-align:center;
-    }
-    .team_introduce{
-      position:absolute;
-      left:-100%;
-      top:0;
-      bottom:0;
-      background:white;
-      width:100%;
-      height:100%;
-      overflow:hidden;
-    }
-    .team_introduce>div:nth-child(1){
-      width:320px;
-      height:100%;
-      display:inline-block;
-      text-align:center;
-      float:left;
-    }
-    .team_introduce>div:nth-child(2){
-      width:calc(100% - 320px);
-      display:inline-block;
-      height:100%;
-      float:left;
-      background:#F2F2F3;
-      padding: 0 32px;
-      text-align:left;
-      font-size:26px;
-      box-sizing:border-box;
-    }
-    .team_introduce>div>img{
-      width:224px;
-      height:224px;
-      border-radius: 112px;
-      object-fit:cover;
-      margin-top:48px;
-    }
-    
-    .team_introduce>div>b{
-      font-family: 'Georgia';
-      font-size: 48px;
-      width:100%;
-      text-align:center;
-      float:left;
-      margin:0;
-      line-height:96px;
-    }
-    .team_introduce>div>span{
-      font-family: 'DMSans-Medium';
-      font-size: 35px;
-      width:100%;
-      display:block;
-      text-align:center;
-    }
-    .team_introduce>div>p{
-      margin-top:35px;
-      line-height:32px;
-      font-family: 'Georgia';
-    }
-    .team_introduce>span{
-      position:absolute;
-      display:block;
-      right:0;
-      bottom:0;
-      width:32px;
-      height:32px;
-      text-align:center;
-      line-height:29px;
-      color:white;
-      background:#FE4905;
-      z-index:2
-    }
-    .team_introduce>span>img{
-      width:60%;
-    }
-    .team_introduceActive{
-      left:0;
-      transition: left 1s;
-    }
-    .team_introduceHide{
-      left:-100%;
-      
-      transition: left 0.5s;
-    }
-  }
+  
+  
+  
   
 </style>

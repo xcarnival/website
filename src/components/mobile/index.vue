@@ -1,16 +1,18 @@
 <template>
   <div class='index_bg'>
     <div class='index_box'>
-      <!-- <div class='index_text'>
+      <div class='index_text'>
         <ul>
-          <li>Metaverse Assets </li>
-          <li>Liquidation Aggregator </li>
+          <li>The Metaverse</li>
+          <li>Assets</li>
+          <li>Liquidation</li>
+          <li>Aggregator</li>
           <li>for Everyone</li>
         </ul>
         <div @click='openPDF'>
           Light Paper >
         </div>
-      </div> -->
+      </div>
       <div class='index_circle_box'>
         <div class='index_circle_left'></div>
         <div class='index_circle_right'></div>
@@ -32,7 +34,7 @@ export default {
   name: 'index',
   methods: {
     openPDF(){
-      window.open('https://xcarnival.fi/assets/doc/lightpaper.pdf')
+      window.open('https://xcarnival.fi/doc/litepaper.pdf')
     }
   },
 }
@@ -43,12 +45,11 @@ export default {
     width:100%;
     position:absolute;
     left:0;
-    top:21rem;
+    top:0;
     bottom:0;
     z-index:0;
     overflow:hidden;
     text-align:center;
-    
   }
   .index_circle_box{
     position:absolute;
@@ -59,50 +60,84 @@ export default {
   }
   .index_circle_left{
     position: absolute;
-    width: 90rem;
-    height: 90rem;
-    left: -45rem;
-    bottom: -45rem;
-    border-radius:45rem;
+    width: 3rem;
+    height: 3rem;
+    left: -1.5rem;
+    bottom: -1.5rem;
+    border-radius:1.5rem;
     background: #FE4905;
-    filter: blur(19rem);
+    filter: blur(0.6rem);
+    opacity:0.5;
   }
   .index_circle_right{
     position: absolute;
-    right:-44rem;
-    top: -44rem;
-    width: 132rem;
-    height: 132rem;
-    border-radius: 66rem;
+    right:-1.5rem;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 62rem;
     background: #FE4905;
-    filter: blur(19rem);
+    filter: blur(0.6rem);
+    opacity:0.5;
   }
   .index_circle_box>img{
     position:absolute;
   }
   .index_circle_box .index_circle_gold1{
-    width:57rem;
-    height:57rem;
-    left:-17rem;
-    top:20rem;
+    width:2rem;
+    height:2rem;
+    left:-0.5rem;
+    top:1.5rem;
   }
   .index_circle_box .index_circle_gold2{
-    width:95rem;
-    height:95rem;
-    left:-40rem;
-    bottom:20rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    left: -1rem;
+    bottom: 0.5rem;
   }
   .index_circle_box .index_circle_gold3{
-    width:54rem;
-    height:54rem;
-    top:0;
-    right:-5rem;
+    width: 1.86rem;
+    height: 1.86rem;
+    top:0.66rem;
+    right:-0.26rem;
   }
   .index_circle_box .index_circle_gold4{
-    width:98rem;
-    height:98rem;
-    bottom: 50rem;
+    width:3.24rem;
+    height:3.24rem;
+    bottom: 1rem;
+    right:-1rem;
   }
-  
+  .index_text{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background:rgb(0 0 0 / 60%);
+    z-index:1;
+  }
+  .index_text ul{
+    color:white;
+    margin-top:2rem;
+  }
+  .index_text ul li{
+    font-family:'Georgia';
+    font-size: 0.36rem;
+    line-height: 0.45rem;
+    font-weight: bold;
+  }
+  .index_text>div{
+    height:0.3rem;
+    color:white;
+    font-size:0.14rem;
+    font-family:'DMSans-Medium';
+    padding: 0 0.1rem;
+    background: #FE4905;
+    border-radius: 0.1rem;
+    display:inline-block;
+    margin-top:0.4rem;
+    font-weight:bold;
+    line-height:0.3rem;
+  }
   
 </style>
