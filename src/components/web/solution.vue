@@ -1,7 +1,7 @@
 <template>
   <div class='solution'>
     <img src='../../assets/ic_down.svg' class="ic_down" :class="activeClass?'ic_active':'ic_hide'" @click='nextSwiper'>
-    <img src='../../assets/ic_down.svg' class="ic_up" :class="activeClass?'ic_active':'ic_hide'" @click='prevSwiper'>
+    <!-- <img src='../../assets/ic_down.svg' class="ic_up" :class="activeClass?'ic_active':'ic_hide'" @click='prevSwiper'> -->
     <swiper ref="mySwiper" :options="swiperOptions" class='swiper-grid swiper_box ' >
     <!-- swiper-no-swiping -->
       <swiperSlide class='swiperSlide'>
@@ -94,6 +94,7 @@ export default {
         direction: 'vertical',
         loop:true,
         speed: 1000,
+        mousewheel:true,
         // autoplay: {
         //   disableOnInteraction: false,
         //   delay: 2000,
