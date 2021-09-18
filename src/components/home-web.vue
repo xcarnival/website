@@ -6,7 +6,7 @@
           <ul class='home_header_tab'>
             <li @click='tabFun(1)' :class="[tabIndex == 1 ? 'tabHigh' : '']">About Us</li>
             <li @click='tabFun(2)' :class="[tabIndex == 2 ? 'tabHigh' : '']">Solution</li>
-            <li @click='tabFun(3)' :class="[tabIndex == 3 ? 'tabHigh' : '']">Team</li>
+            <!-- <li @click='tabFun(3)' :class="[tabIndex == 3 ? 'tabHigh' : '']">Team</li> -->
             <li @click='tabFun(4)' :class="[tabIndex == 4 ? 'tabHigh' : '']">Investors & Partners</li>
             <li @click='tabFun(5)' :class="[tabIndex == 5 ? 'tabHigh' : '']">Discover</li>
           </ul>
