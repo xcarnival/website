@@ -23,8 +23,9 @@
         <div class='investorsView_box_3'><img src='../../assets/18.png' /></div>
         <div class='investorsView_box_3'><img src='../../assets/15.png' /></div>
 
-        <div class='investorsView_box_2'><img src='../../assets/17.png' /></div>
-        <div class='investorsView_box_2'><img src='../../assets/solv.png' /></div>
+        <div class='investorsView_box_3'><img src='../../assets/17.png' /></div>
+        <div class='investorsView_box_3 investorsView_box_px'><img src='../../assets/gate.svg' /></div>
+        <div class='investorsView_box_3'><img src='../../assets/solv.png' /></div>
         
         
         
@@ -52,6 +53,9 @@ export default {
 <style scoped>
     .investorsView_box_4{
       width: calc(calc(100% - 21px)/4);
+    }
+    .investorsView_box_px{
+      padding:10px 0;
     }
     .investorsView_box_3{
       width: calc(calc(100% - 14px)/3);

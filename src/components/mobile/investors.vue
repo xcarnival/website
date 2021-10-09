@@ -25,7 +25,9 @@
         <div class='investorsView_box_2'><img src='../../assets/15.png' /></div>
 
         <div class='investorsView_box_2'><img src='../../assets/17.png' /></div>
+        <div class='investorsView_box_2 investorsView_box_px'><img src='../../assets/gate.svg' /></div>
         <div class='investorsView_box_2'><img src='../../assets/solv.png' /></div>
+        
       </div>
     </div>
   </div>
@@ -120,6 +122,9 @@ export default {
       height:100%;
       width:100%;
       object-fit:scale-down;
+    }
+    .investorsView_box_px{
+      padding: 10px 0;
     }
   
   
