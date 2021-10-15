@@ -2,7 +2,7 @@
   <div class='investors'>
     <div class="investorsView">
       <h1>Investors & Partners</h1>
-      <p>$2M Seed Funding Round</p>
+      <!-- <p>$2M Seed Funding Round</p> -->
       <div class='investorsView_box'>
         <div class='investorsView_box_4'><img src='../../assets/1.png' /></div>
         <div class='investorsView_box_4'><img src='../../assets/2.png' /></div>

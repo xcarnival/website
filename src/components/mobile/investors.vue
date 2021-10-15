@@ -1,7 +1,7 @@
 <template>
   <div class='investors'>
     <h1>Investors <br />& Partners</h1>
-    <p>$2M Seed Funding Round</p>
+    <!-- <p>$2M Seed Funding Round</p> -->
     <b></b>
     <div class="investorsView">
       <div class='investorsView_box'>
