@@ -19,6 +19,7 @@
       <!-- <li @click='tabFun(3)' :class="[tabIndex == 3 ? 'tabHigh' : '']">Team</li> -->
       <li @click='tabFun(4)' :class="[tabIndex == 4 ? 'tabHigh' : '']">Investors & Partners</li>
       <li @click='tabFun(5)' :class="[tabIndex == 5 ? 'tabHigh' : '']">Discover</li>
+      <li @click='tabFun(6)' >Launch APP</li>
     </ul>
     
     <div class='home_content'>
@@ -53,9 +54,12 @@ export default {
   },
   methods: {
     tabFun(i){
-      console.log(i)
-      this.tabIndex = i;
       this.menuToggle = true;
+      if(i == 6){
+        window.open('https://app.xcarnival.fi')
+      }else{
+        this.tabIndex = i;
+      }
     },
     openList(){
       this.menuToggle = !this.menuToggle;
