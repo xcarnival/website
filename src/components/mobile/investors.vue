@@ -23,6 +23,7 @@
         <div class='investorsView_box_2'><img src='../../assets/bsc.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/18.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/15.png' /></div>
+        <div class='investorsView_box_2 investorsView_box_px'><img src='../../assets/alpha.png' /></div>
 
         <div class='investorsView_box_2'><img src='../../assets/17.png' /></div>
         <div class='investorsView_box_2 investorsView_box_px'><img src='../../assets/gate.svg' /></div>

@@ -19,11 +19,12 @@
         <div class='investorsView_box_4'><img src='../../assets/9.png' /></div>
         <div class='investorsView_box_4'><img src='../../assets/5.png' /></div>
 
-        <div class='investorsView_box_3'><img src='../../assets/bsc.png' /></div>
-        <div class='investorsView_box_3'><img src='../../assets/18.png' /></div>
-        <div class='investorsView_box_3'><img src='../../assets/15.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/bsc.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/18.png' /></div>
+        <div class='investorsView_box_4'><img src='../../assets/15.png' /></div>
+        <div class='investorsView_box_4 investorsView_box_px'><img src='../../assets/alpha.png' /></div>
 
-        <div class='investorsView_box_3'><img src='../../assets/17.png' /></div>
+        <div class='investorsView_box_3 investorsView_box_px'><img src='../../assets/17.png' /></div>
         <div class='investorsView_box_3 investorsView_box_px'><img src='../../assets/gate.svg' /></div>
         <div class='investorsView_box_3'><img src='../../assets/solv.png' /></div>
         
