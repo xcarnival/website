@@ -7,9 +7,9 @@
           <div class='swiper_list_introduce'>
             <h1>What's</h1>
             <h1>XCarnival?</h1>
-            <p>XCarnival is an aggregator for synthetic decentralized finance (DeFi) assets that provides the masses on-chain exposure to a wide variety of crypto and non-crypto assets.</p>
+            <p>XCarnival: A Metaverse Assets Liquidity Aggregator for Everyone</p>
             <div>Unique Value Proposition</div>
-            <p>XCarnival not only provides easy-to-use financial products for users to create synthetic assets in DeFi, but also creates more liquidity in the DeFi market by allowing users to pledge and borrow NFTs and other Altcoin assets without having to sell them</p>
+            <p>XCarnival offers innovative liquidity solutions for varieties of NFT assets and long- tail crypto assets.</p>
             <img class='aboutUsImg' src='../../assets/aboutUsImg1.png' />
           </div>
         </div>  

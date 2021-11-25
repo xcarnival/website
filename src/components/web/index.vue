@@ -5,7 +5,7 @@
       <div class='index_text'>
         <ul>
           <li>The Metaverse Assets </li>
-          <li>Liquidation Aggregator </li>
+          <li>Liquidity Aggregator </li>
           <li>for Everyone</li>
         </ul>
         <div @click='openPDF'>

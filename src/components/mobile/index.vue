@@ -5,7 +5,7 @@
         <ul>
           <li>The Metaverse</li>
           <li>Assets</li>
-          <li>Liquidation</li>
+          <li>Liquidity</li>
           <li>Aggregator</li>
           <li>for Everyone</li>
         </ul>

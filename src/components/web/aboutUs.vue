@@ -9,9 +9,9 @@
           <div class='swiper_list_introduce'>
             <h1>What's</h1>
             <h1>XCarnival?</h1>
-            <p>XCarnival: A Metaverse Assets Liquidation Aggregator for Everyone</p>
+            <p>XCarnival: A Metaverse Assets Liquidity Aggregator for Everyone</p>
             <div>Unique Value Proposition</div>
-            <p>XCarnival offers innovative liquidation solutions for varieties of NFT assets and long- tail crypto assets.</p>
+            <p>XCarnival offers innovative liquidity solutions for varieties of NFT assets and long- tail crypto assets.</p>
           </div>
           <div>
             <img class='aboutUsImg' src='../../assets/aboutUsImg1.png' />

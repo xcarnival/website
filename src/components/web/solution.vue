@@ -36,7 +36,7 @@
             <h2>XBroker</h2>
             <p>XCarnival's original time-limited auction clearing mechanism. The pledge model is optimized for special types of assets with extremely poor liquidity, such as NFTs.</p>
             <h2>Megabox</h2>
-            <p>Allows users to unlock the liquidation of their long-tail assets which have relatively limited liquidity (such as Altcoins and LPs).</p>
+            <p>Allows users to unlock the liquidity of their long-tail assets which have relatively limited liquidity (such as Altcoins and LPs).</p>
           </div>
         </div>  
       </swiperSlide>
