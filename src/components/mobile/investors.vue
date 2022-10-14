@@ -10,21 +10,22 @@
         <div class='investorsView_box_2'><img src='../../assets/3.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/4.png' /></div>
 
+        <div class='investorsView_box_2'><img style='height:80%;margin-top:5%' src='../../assets/METASENSE.svg' /></div>
         <div class='investorsView_box_2'><img src='../../assets/11.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/14.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/13.png' /></div>
-        <div class='investorsView_box_2'><img src='../../assets/12.png' /></div>
 
+        <div class='investorsView_box_2'><img src='../../assets/12.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/4sv.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/10.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/9.png' /></div>
-        <div class='investorsView_box_2'><img src='../../assets/5.png' /></div>
 
+        <div class='investorsView_box_2'><img src='../../assets/5.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/bsc.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/18.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/15.png' /></div>
-        <div class='investorsView_box_2 investorsView_box_px'><img src='../../assets/alpha.png' /></div>
 
+        <div class='investorsView_box_2 investorsView_box_px'><img src='../../assets/alpha.png' /></div>
         <div class='investorsView_box_2'><img src='../../assets/17.png' /></div>
         <div class='investorsView_box_2 investorsView_box_px'><img src='../../assets/gate.svg' /></div>
         <div class='investorsView_box_2'><img src='../../assets/solv.png' /></div>
